@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Header, Footer, WhatsAppButton, CookieConsent, ThemeProvider } from "@/components/layout";
+import { ThemeProvider, LayoutShell } from "@/components/layout";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,11 +33,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning className="font-body antialiased text-gray-900 bg-white dark:bg-ink dark:text-white transition-colors duration-300">
         <ThemeProvider>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-          <CookieConsent />
+          <LayoutShell>{children}</LayoutShell>
         </ThemeProvider>
       </body>
     </html>
