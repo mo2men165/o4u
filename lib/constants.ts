@@ -3,10 +3,10 @@ export const COMPANY_INFO = {
   shortName: "O4U",
   description:
     "Egypt's premier outsourcing partner — delivering exceptional customer service, sales, and back-office solutions to businesses worldwide.",
-  address: "260 Street, Maadi, Cairo, Egypt",
+  address: "86A 260 Street, Maadi, Cairo, Egypt",
   phone: "+20 127 369 0006",
   email: "info@outsourcing-4-you.com",
-  workingHours: "Sun–Thu, 9:00 AM – 6:00 PM (EET)",
+  workingHours: "Mon-Fri, 11:00 AM – 8:00 PM (EG Time)",
   socials: {
     linkedin: "https://www.linkedin.com/company/outsourcing-4-you/",
     facebook: "https://www.facebook.com/Outsourc4you",
