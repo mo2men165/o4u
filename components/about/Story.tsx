@@ -15,7 +15,7 @@ const milestones = [
     year: "2020",
     title: "Building the Foundation",
     description:
-      "Expanded core teams, standardized training programs, and deepened UK client relationships as demand for reliable offshore support grew.",
+      "Expanded core teams, standardised training programmes, and deepened UK client relationships as demand for reliable offshore support grew.",
   },
   {
     year: "2021",
@@ -39,7 +39,7 @@ const milestones = [
     year: "2024",
     title: "Elite BPO Recognition",
     description:
-      "Recognized as one of Egypt's premier BPO providers, serving 50+ clients across 4 continents — with the UK remaining our #1 market — and a 98% client retention rate.",
+      "Recognised as one of Egypt's premier BPO providers, serving 50+ clients across 4 continents — with the UK remaining our #1 market — and a 98% client retention rate.",
   },
   {
     year: "2025",

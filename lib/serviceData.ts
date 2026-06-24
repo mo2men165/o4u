@@ -85,7 +85,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       },
       {
         step: "04",
-        title: "Go-Live & Optimize",
+        title: "Go-Live & Optimise",
         description:
           "We launch with real-time monitoring, weekly QA reviews, and continuous coaching to compound performance.",
         icon: "TrendingUp",
@@ -149,7 +149,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "A dedicated sales development engine working for you 24/7",
-      body: "We build and operate your entire outbound prospecting function — from ideal customer profiling and data sourcing to multi-touch outreach and qualification. Our SDRs don't spray and pray; they use data, personalization, and proven sequences to generate leads that actually convert.",
+      body: "We build and operate your entire outbound prospecting function — from ideal customer profiling and data sourcing to multi-touch outreach and qualification. Our SDRs don't spray and pray; they use data, personalisation, and proven sequences to generate leads that actually convert.",
       highlights: [
         "ICP Definition & Data Sourcing",
         "Multi-Channel Outreach",
@@ -181,7 +181,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       },
       {
         step: "04",
-        title: "Deliver & Optimize",
+        title: "Deliver & Optimise",
         description:
           "Qualified leads flow into your CRM with full notes. We continuously refine based on conversion data.",
         icon: "TrendingUp",
@@ -204,7 +204,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Mail",
         title: "Email Sequences",
         description:
-          "Personalized, multi-step email campaigns with A/B testing, optimal send times, and reply management.",
+          "Personalised, multi-step email campaigns with A/B testing, optimal send times, and reply management.",
       },
       {
         icon: "BarChart2",
@@ -214,7 +214,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       },
       {
         icon: "RefreshCw",
-        title: "Continuous Optimization",
+        title: "Continuous Optimisation",
         description:
           "Weekly reviews to refine targeting, messaging, and sequencing based on what's converting — and what's not.",
       },
@@ -249,7 +249,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       highlights: [
         "Outbound & Inbound Sales",
         "BANT Qualification Framework",
-        "Upsell & Cross-Sell Programs",
+        "Upsell & Cross-Sell Programmes",
         "Real-Time Sales Coaching",
       ],
     },
@@ -277,7 +277,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       },
       {
         step: "04",
-        title: "Optimize & Scale",
+        title: "Optimise & Scale",
         description:
           "Weekly revenue analysis reveals what's working. We double down on winning strategies and scale your team.",
         icon: "TrendingUp",
@@ -306,13 +306,13 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "RefreshCw",
         title: "Upsell Sequences",
         description:
-          "Systematic cross-sell and upsell sequences triggered by customer behavior, purchase history, and lifecycle stage.",
+          "Systematic cross-sell and upsell sequences triggered by customer behaviour, purchase history, and lifecycle stage.",
       },
       {
         icon: "Shield",
         title: "Customer Retention",
         description:
-          "Specialized win-back and save-desk programs that recover churning customers and reduce cancellation rates.",
+          "Specialised win-back and save-desk programmes that recover churning customers and reduce cancellation rates.",
       },
       {
         icon: "Users",
@@ -340,7 +340,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       { value: "ISO", label: "Security Standards" },
     ],
     overview: {
-      headline: "Your data, processed with machine precision and human judgment",
+      headline: "Your data, processed with machine precision and human judgement",
       body: "From one-time migration projects to ongoing high-volume processing, our data entry specialists deliver exceptional accuracy at scale. We handle structured and unstructured data across multiple formats, with dual-verification and QA processes that virtually eliminate errors before delivery.",
       highlights: [
         "Structured & Unstructured Formats",
@@ -408,7 +408,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Zap",
         title: "Batch Processing",
         description:
-          "Optimized batch workflows enable us to process millions of records quickly without sacrificing accuracy.",
+          "Optimised batch workflows enable us to process millions of records quickly without sacrificing accuracy.",
       },
       {
         icon: "Cloud",
@@ -437,7 +437,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "The voice of your market, decoded and delivered",
-      body: "We design, execute, and analyze market research surveys that give you an unfiltered view of your customers, competitors, and market opportunities. Our experienced survey specialists ensure high response rates, minimal bias, and insights you can act on — not just read about.",
+      body: "We design, execute, and analyse market research surveys that give you an unfiltered view of your customers, competitors, and market opportunities. Our experienced survey specialists ensure high response rates, minimal bias, and insights you can act on — not just read about.",
       highlights: [
         "Custom Survey Design & Scripting",
         "CATI, CAWI & CAPI Methodologies",
@@ -471,7 +471,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "04",
         title: "Analysis & Reporting",
         description:
-          "Raw data is cleaned, coded, analyzed, and delivered as visual insight reports with clear recommendations.",
+          "Raw data is cleaned, coded, analysed, and delivered as visual insight reports with clear recommendations.",
         icon: "BarChart2",
       },
     ],
@@ -480,7 +480,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "PenTool",
         title: "Custom Questionnaires",
         description:
-          "Research-backed questionnaire design that minimizes bias and maximizes completion rates and data quality.",
+          "Research-backed questionnaire design that minimises bias and maximises completion rates and data quality.",
       },
       {
         icon: "Globe",
@@ -498,7 +498,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "TrendingUp",
         title: "NPS & CSAT Tracking",
         description:
-          "Recurring measurement programs that track brand health, satisfaction, and loyalty metrics over time.",
+          "Recurring measurement programmes that track brand health, satisfaction, and loyalty metrics over time.",
       },
       {
         icon: "BarChart2",
@@ -510,7 +510,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Layers",
         title: "Advanced Analytics",
         description:
-          "Segmentation, cross-tabulation, and regression modeling to extract deeper strategic insights from your data.",
+          "Segmentation, cross-tabulation, and regression modelling to extract deeper strategic insights from your data.",
       },
     ],
   },
@@ -565,7 +565,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       },
       {
         step: "04",
-        title: "Ongoing Optimization",
+        title: "Ongoing Optimisation",
         description:
           "Monthly analysis of top issues, template updates, and SLA compliance reviews keep quality at its peak.",
         icon: "TrendingUp",
@@ -594,13 +594,13 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Cpu",
         title: "AI-Assisted Drafting",
         description:
-          "AI co-pilot tools help agents draft accurate, on-brand responses faster without replacing human judgment.",
+          "AI co-pilot tools help agents draft accurate, on-brand responses faster without replacing human judgement.",
       },
       {
         icon: "Heart",
         title: "Tone Calibration",
         description:
-          "Brand voice workshops ensure every message sounds authentically like you — not a generic support center.",
+          "Brand voice workshops ensure every message sounds authentically like you — not a generic support centre.",
       },
       {
         icon: "ArrowUpRight",
@@ -752,7 +752,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "03",
         title: "Multi-Touch Outreach",
         description:
-          "Personalized phone and email sequences build familiarity and trust before the meeting request is ever made.",
+          "Personalised phone and email sequences build familiarity and trust before the meeting request is ever made.",
         icon: "Phone",
       },
       {
@@ -768,7 +768,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Target",
         title: "Decision-Maker Access",
         description:
-          "We specialize in reaching C-suite, VP, and Director-level contacts with messaging that earns a genuine response.",
+          "We specialise in reaching C-suite, VP, and Director-level contacts with messaging that earns a genuine response.",
       },
       {
         icon: "Calendar",
@@ -834,7 +834,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "01",
         title: "Process Audit",
         description:
-          "We map your current back-office workflows, identify inefficiencies, and design optimized processes before we start.",
+          "We map your current back-office workflows, identify inefficiencies, and design optimised processes before we start.",
         icon: "Search",
       },
       {

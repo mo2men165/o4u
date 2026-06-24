@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Scale smarter with a dedicated team built around your business. Premium BPO services from Cairo, Egypt — serving 50+ global clients across 4 continents.",
     type: "website",
-    locale: "en_US",
+    locale: "en_GB",
     siteName: "O4U",
   },
   twitter: {

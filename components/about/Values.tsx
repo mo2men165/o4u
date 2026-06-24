@@ -26,7 +26,7 @@ const values = [
   {
     icon: Star,
     number: "03",
-    title: "People at the Center",
+    title: "People at the Centre",
     description:
       "Our agents are not resources — they are our greatest asset. We invest in their growth, wellbeing, and career progression because it directly drives client outcomes.",
     accent: "from-primary-600/30 to-primary-900/80",

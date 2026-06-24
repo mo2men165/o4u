@@ -66,7 +66,7 @@ const industries = [
     headline: "Omnichannel Excellence, Every Season",
     description:
       "Scale effortlessly during peak seasons with our retail-trained agents who handle everything from loyalty inquiries to in-store escalations across all channels.",
-    bullets: ["Omnichannel customer care", "Loyalty program support", "Seasonal scale-up (2-week ramp)", "In-store escalation handling"],
+    bullets: ["Omnichannel customer care", "Loyalty programme support", "Seasonal scale-up (2-week ramp)", "In-store escalation handling"],
     stat: { value: "4.8★", label: "average post-interaction rating" },
   },
 ];

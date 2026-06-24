@@ -44,7 +44,7 @@ export default function CookieConsent() {
           <Container>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-4">
               <p className="text-sm text-gray-600 text-center sm:text-left">
-                We use cookies to enhance your browsing experience and analyze
+                We use cookies to enhance your browsing experience and analyse
                 site traffic.
               </p>
               <div className="flex items-center gap-3 flex-shrink-0">

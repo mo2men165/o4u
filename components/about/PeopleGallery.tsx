@@ -14,12 +14,12 @@ const culturePoints = [
   {
     icon: TrendingUp,
     title: "Growth as a Promise",
-    body: "Clear career paths, internal promotions, and leadership programs. Over 40% of our team leaders were promoted from agent roles.",
+    body: "Clear career paths, internal promotions, and leadership programmes. Over 40% of our team leaders were promoted from agent roles.",
   },
   {
     icon: Users2,
     title: "A Diverse Force",
-    body: "200+ agents across a variety of backgrounds, languages, and specializations. Our diversity is our strength in serving global markets.",
+    body: "200+ agents across a variety of backgrounds, languages, and specialisations. Our diversity is our strength in serving global markets.",
   },
   {
     icon: Coffee,

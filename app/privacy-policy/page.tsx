@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
               forms, job application forms, and newsletter subscriptions, including
               your name, email address, phone number, and any messages you send us.
               We also automatically collect certain technical data such as your IP
-              address, browser type, and browsing behavior through cookies and
+              address, browser type, and browsing behaviour through cookies and
               similar technologies to improve your experience on our website.
             </p>
 
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
               We use the information we collect to respond to your inquiries,
               process job applications, improve our website and services, and
               communicate with you about our offerings. Your data helps us
-              personalize your experience and ensure we deliver relevant content.
+              personalise your experience and ensure we deliver relevant content.
               We may also use aggregated, anonymized data for analytics and
               business intelligence purposes.
             </p>
@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
 
             <h2>4. Cookies</h2>
             <p>
-              Our website uses cookies to enhance your browsing experience, analyze
+              Our website uses cookies to enhance your browsing experience, analyse
               site traffic, and understand user preferences. You can control cookie
               settings through your browser preferences. By continuing to use our
               website, you consent to the use of cookies in accordance with this

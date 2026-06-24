@@ -65,7 +65,7 @@ export default function TermsOfServicePage() {
               reproduce, distribute, modify, or create derivative works from any
               content without our prior written consent. The {COMPANY_INFO.name}{" "}
               name and logo are registered trademarks and may not be used without
-              authorization.
+              authorisation.
             </p>
 
             <h2>4. Limitation of Liability</h2>

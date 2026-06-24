@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "About Us | O4U",
   description:
-    "Built in Cairo. Trusted worldwide. Discover the story, mission, and people behind O4U — Egypt's premier BPO and call center partner.",
+    "Built in Cairo. Trusted worldwide. Discover the story, mission, and people behind O4U — Egypt's premier BPO and call centre partner.",
   openGraph: {
     title: "About Us | O4U",
     description:

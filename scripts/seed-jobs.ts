@@ -80,8 +80,8 @@ const JOB_POSTINGS = [
     department: 'Admin',
     type: 'Full-time',
     description:
-      'Manage the full recruitment cycle from sourcing to onboarding. Coordinate interviews, maintain employee records, and support HR initiatives including engagement programs and policy implementation.',
-    shortDescription: 'Drive recruitment and support HR operations across the organization.',
+      'Manage the full recruitment cycle from sourcing to onboarding. Coordinate interviews, maintain employee records, and support HR initiatives including engagement programmes and policy implementation.',
+    shortDescription: 'Drive recruitment and support HR operations across the organisation.',
     active: true,
     order: 5,
   },

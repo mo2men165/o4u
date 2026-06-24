@@ -37,9 +37,9 @@ const extendedDescriptions: Record<string, string> = {
   "back-office":
     "Free your internal teams from repetitive tasks. Our specialists handle data entry, document processing, invoicing, and records management at speed and scale.",
   "revenue-growth":
-    "Maximize every customer interaction with strategic upselling and cross-selling programs that increase average order value and lifetime customer worth.",
+    "Maximise every customer interaction with strategic upselling and cross-selling programmes that increase average order value and lifetime customer worth.",
   "analytics-reporting":
-    "Real-time dashboards, custom KPI tracking, and actionable insights so you can make confident, data-driven decisions and continuously optimize performance.",
+    "Real-time dashboards, custom KPI tracking, and actionable insights so you can make confident, data-driven decisions and continuously optimise performance.",
   "chat-email-support":
     "Fast, professional written support across every digital channel. Consistent brand tone, rapid turnaround, and high CSAT scores across live chat and email.",
   "hr-solutions":

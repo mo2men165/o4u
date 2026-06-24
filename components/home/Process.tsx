@@ -30,9 +30,9 @@ const steps = [
   {
     number: "04",
     icon: HeartHandshake,
-    title: "Launch & Optimize",
+    title: "Launch & Optimise",
     description:
-      "Go live in as little as 2 weeks. We track every KPI and continuously optimize performance alongside you.",
+      "Go live in as little as 2 weeks. We track every KPI and continuously optimise performance alongside you.",
   },
 ];
 

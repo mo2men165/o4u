@@ -45,7 +45,7 @@ export const SERVICES = [
   {
     id: "customer-service",
     title: "Customer Service",
-    description: "We provide prompt, personalized support that elevates customer satisfaction and strengthens brand loyalty. Our trained agents handle inquiries with empathy and efficiency, ensuring every interaction leaves a positive impression.",
+    description: "We provide prompt, personalised support that elevates customer satisfaction and strengthens brand loyalty. Our trained agents handle inquiries with empathy and efficiency, ensuring every interaction leaves a positive impression.",
     icon: "Headphones",
     benefits: ["24/7 multilingual coverage", "First-call resolution focus", "Omnichannel support", "Customer satisfaction tracking"],
   },
@@ -59,9 +59,9 @@ export const SERVICES = [
   {
     id: "telesales-upselling",
     title: "Telesales & Upselling",
-    description: "Our skilled sales agents identify cross-selling and upselling opportunities to maximize customer lifetime value. We combine persuasive communication with deep product knowledge to drive revenue growth.",
+    description: "Our skilled sales agents identify cross-selling and upselling opportunities to maximise customer lifetime value. We combine persuasive communication with deep product knowledge to drive revenue growth.",
     icon: "TrendingUp",
-    benefits: ["Revenue optimization strategies", "Cross-sell identification", "Customer retention programs", "Performance-based metrics"],
+    benefits: ["Revenue optimisation strategies", "Cross-sell identification", "Customer retention programmes", "Performance-based metrics"],
   },
   {
     id: "data-entry",
@@ -101,7 +101,7 @@ export const SERVICES = [
   {
     id: "back-office-support",
     title: "Back Office Support",
-    description: "We handle essential administrative tasks so your team can focus on core business activities. From document processing to reporting, our back-office team keeps your operations efficient and organized.",
+    description: "We handle essential administrative tasks so your team can focus on core business activities. From document processing to reporting, our back-office team keeps your operations efficient and organised.",
     icon: "Briefcase",
     benefits: ["Document management", "Invoice processing", "Report generation", "Administrative coordination"],
   },
@@ -147,7 +147,7 @@ export const INDUSTRIES = [
     id: "retail",
     title: "Retail",
     description:
-      "In-store support, loyalty program management, and omnichannel customer care.",
+      "In-store support, loyalty programme management, and omnichannel customer care.",
     icon: "Store",
   },
 ] as const;
@@ -229,7 +229,7 @@ export const SERVICE_FAQS = [
   {
     question: "Can we visit your office?",
     answer:
-      "We welcome client visits to our Maadi, Cairo facility. Seeing our operations firsthand gives you confidence in our team, technology, and processes. Contact us to schedule a tour at a time that works for you.",
+      "We welcome client visits to our Maadi, Cairo facility. Seeing our operations first-hand gives you confidence in our team, technology, and processes. Contact us to schedule a tour at a time that works for you.",
   },
 ] as const;
 
@@ -373,7 +373,7 @@ export const HOW_IT_WORKS = [
     number: 4,
     title: "Ongoing Partnership",
     description:
-      "We continuously monitor performance and optimize to exceed your expectations.",
+      "We continuously monitor performance and optimise to exceed your expectations.",
     icon: "HeartHandshake",
   },
 ] as const;
@@ -428,11 +428,11 @@ export const PERKS = [
   {
     title: "Career Growth & Promotion Paths",
     description:
-      "Clear advancement tracks from agent to management. We promote from within and invest in your long-term development with mentorship and leadership programs.",
+      "Clear advancement tracks from agent to management. We promote from within and invest in your long-term development with mentorship and leadership programmes.",
     icon: "TrendingUp",
   },
   {
-    title: "World-Class Training Programs",
+    title: "World-Class Training Programmes",
     description:
       "Comprehensive onboarding and continuous skill development. Our training academy covers communication, technology, and industry-specific knowledge.",
     icon: "GraduationCap",
@@ -452,7 +452,7 @@ export const PERKS = [
   {
     title: "Transportation & Meals",
     description:
-      "Complimentary daily transportation to and from work and subsidized meals, because we believe in taking care of the essentials so you can focus on excelling.",
+      "Complimentary daily transportation to and from work and subsidised meals, because we believe in taking care of the essentials so you can focus on excelling.",
     icon: "Bus",
   },
   {
@@ -506,8 +506,8 @@ export const JOB_POSTINGS = [
     department: "Admin",
     type: "Full-time",
     description:
-      "Manage the full recruitment cycle from sourcing to onboarding. Coordinate interviews, maintain employee records, and support HR initiatives including engagement programs and policy implementation.",
-    shortDescription: "Drive recruitment and support HR operations across the organization.",
+      "Manage the full recruitment cycle from sourcing to onboarding. Coordinate interviews, maintain employee records, and support HR initiatives including engagement programmes and policy implementation.",
+    shortDescription: "Drive recruitment and support HR operations across the organisation.",
   },
   {
     id: "lead-gen-specialist",
@@ -527,9 +527,9 @@ export const CAREER_FAQS = [
       "Our interview process consists of three stages: an initial phone screening, a skills assessment (language and scenario-based), and a final interview with the hiring manager. The entire process typically takes 5-7 business days.",
   },
   {
-    question: "Do I need prior call center experience?",
+    question: "Do I need prior call centre experience?",
     answer:
-      "Not necessarily. While experience is a plus, we welcome enthusiastic candidates who demonstrate strong communication skills and a willingness to learn. Our comprehensive training program prepares you for success regardless of your background.",
+      "Not necessarily. While experience is a plus, we welcome enthusiastic candidates who demonstrate strong communication skills and a willingness to learn. Our comprehensive training programme prepares you for success regardless of your background.",
   },
   {
     question: "What are the typical working hours?",
@@ -539,12 +539,12 @@ export const CAREER_FAQS = [
   {
     question: "Is training provided for new hires?",
     answer:
-      "Absolutely. Every new hire undergoes a comprehensive paid training program covering communication skills, product knowledge, systems training, and quality standards. Training duration ranges from one to three weeks depending on the project.",
+      "Absolutely. Every new hire undergoes a comprehensive paid training programme covering communication skills, product knowledge, systems training, and quality standards. Training duration ranges from one to three weeks depending on the project.",
   },
   {
     question: "What languages are required?",
     answer:
-      "Fluent English is required for most positions. Arabic proficiency is a plus. Some specialized roles may require French, German, or Spanish. Language requirements are specified in each job listing.",
+      "Fluent English is required for most positions. Arabic proficiency is a plus. Some specialised roles may require French, German, or Spanish. Language requirements are specified in each job listing.",
   },
   {
     question: "What is the dress code?",

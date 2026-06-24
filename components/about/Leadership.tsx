@@ -15,7 +15,7 @@ const leaders = [
   {
     name: "Dina El-Sayed",
     title: "Chief Operating Officer",
-    bio: "Operations architect behind O4U's rapid scale. Expert in process optimization, QA systems, and building teams that consistently exceed client SLAs.",
+    bio: "Operations architect behind O4U's rapid scale. Expert in process optimisation, QA systems, and building teams that consistently exceed client SLAs.",
     initials: "DE",
     color: "from-gold-600/80 to-primary-700",
   },

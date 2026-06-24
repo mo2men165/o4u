@@ -7,9 +7,9 @@ import { ArrowRight, MapPin, Globe2, Award } from "lucide-react";
 import { Container } from "@/components/ui";
 
 const badges = [
-  { icon: MapPin, text: "Cairo, Egypt" },
-  { icon: Globe2, text: "4 Continents Served" },
-  { icon: Award, text: "8+ Years of Excellence" },
+  { icon: MapPin, text: "Headquartered in Maadi, Cairo" },
+  { icon: Globe2, text: "50+ Clients Across 4 Continents" },
+  { icon: Award, text: "98% Client Retention Rate" },
 ];
 
 const headingLine1 = ["Built", "in", "Cairo."];
@@ -113,16 +113,29 @@ export default function Hero() {
           </span>
         </h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75 }}
-          className="mt-6 font-body text-lg md:text-xl text-ink/60 dark:text-white/60 leading-relaxed max-w-2xl"
+          className="mt-6 space-y-4 font-body text-lg md:text-xl text-ink/60 dark:text-white/60 leading-relaxed max-w-3xl"
         >
-          We are not just another outsourcing provider. We are a team of 250+ driven
-          professionals who believe that Egyptian talent deserves a place on the
-          world stage — and we&apos;re proving it every single day.
-        </motion.p>
+          <p>
+            O4U is Egypt&apos;s premier BPO partner. We are a team of 250+ multilingual
+            professionals delivering customer service, sales, and back-office
+            operations to businesses across the UK, Europe, the US, and the Middle
+            East. We don&apos;t fill seats. We build dedicated teams that integrate
+            into your culture, hit your KPIs, and scale with your growth.
+          </p>
+          <p>
+            What sets us apart is how we combine world-class talent with
+            operational rigour: native-level English training tailored to UK
+            markets, live operations in as little as two weeks, real-time QA
+            dashboards, and a 98% client retention rate that speaks for itself.
+            From our Maadi headquarters, we give global brands access to
+            exceptional Egyptian talent without the overhead of building it
+            in-house.
+          </p>
+        </motion.div>
 
         {/* Floating badge row */}
         <motion.div
