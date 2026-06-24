@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { LinkedinIcon, FacebookIcon } from "@/components/ui/BrandIcons";
+import Image from "next/image";
+import { LinkedinIcon, FacebookIcon, InstagramIcon } from "@/components/ui/BrandIcons";
 import { COMPANY_INFO, FOOTER_LINKS } from "@/lib/constants";
 import { Container } from "@/components/ui";
 
@@ -38,9 +39,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-12">
           {/* Company Info */}
           <div>
-            <h4 className="font-heading font-bold text-xl mb-4">
-              {COMPANY_INFO.name}
-            </h4>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/images/logo2.png"
+                alt="O4U"
+                width={439}
+                height={568}
+                className="h-24 w-auto"
+              />
+            </Link>
             <p className="text-ink/60 dark:text-gray-300 text-sm leading-relaxed mb-6">
               {COMPANY_INFO.description}
             </p>
@@ -62,6 +69,15 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-[18px] h-[18px]" />
+              </a>
+              <a
+                href={COMPANY_INFO.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-black/8 dark:bg-white/10 flex items-center justify-center text-ink/60 dark:text-gray-300 hover:text-ink dark:hover:text-white hover:bg-black/15 dark:hover:bg-white/20 transition-colors"
+                aria-label="Instagram"
+              >
+                <InstagramIcon className="w-[18px] h-[18px]" />
               </a>
             </div>
           </div>
@@ -153,7 +169,7 @@ export default function Footer() {
       <div className="border-t border-black/10 dark:border-white/10">
         <Container>
           <p className="py-6 text-center text-sm text-ink/40 dark:text-gray-400">
-            &copy; 2024 Outsourcing 4 You. All rights reserved.
+            &copy; 2026 O4U. All rights reserved.
           </p>
         </Container>
       </div>

@@ -21,7 +21,7 @@ export default function LifeGallery() {
       <Container>
         <SectionHeading
           eyebrow="Our Culture"
-          title="Life at Outsourcing 4 You"
+          title="Life at O4U"
           subtitle="A glimpse into our vibrant, international workplace culture."
         />
       </Container>

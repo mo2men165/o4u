@@ -11,20 +11,20 @@ import {
 } from "@/components/home";
 
 export const metadata: Metadata = {
-  title: "Outsourcing 4 You — Egypt's Premier Outsourcing Partner",
+  title: "O4U — Egypt's Premier Outsourcing Partner",
   description:
-    "Outsourcing 4 You delivers dedicated multilingual teams across customer service, sales, and back-office operations to businesses across North America, Europe, and the Middle East.",
+    "O4U delivers dedicated multilingual teams across customer service, sales, and back-office operations to businesses across North America, Europe, and the Middle East.",
   openGraph: {
-    title: "Outsourcing 4 You — Egypt's Premier Outsourcing Partner",
+    title: "O4U — Egypt's Premier Outsourcing Partner",
     description:
       "Scale smarter with a dedicated team built around your business. Premium BPO services from Cairo, Egypt — serving 50+ global clients across 4 continents.",
     type: "website",
     locale: "en_US",
-    siteName: "Outsourcing 4 You",
+    siteName: "O4U",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Outsourcing 4 You — Egypt's Premier Outsourcing Partner",
+    title: "O4U — Egypt's Premier Outsourcing Partner",
     description:
       "Scale smarter with a dedicated team built around your business. Customer support, sales, back-office — 4 continents served.",
   },

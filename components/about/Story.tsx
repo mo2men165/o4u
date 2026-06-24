@@ -12,6 +12,12 @@ const milestones = [
       "Founded in Maadi, Cairo with a dedicated team and a bold vision — deliver world-class outsourcing to UK businesses. Our first client was a fast-growing UK e-commerce brand that needed native-level English support.",
   },
   {
+    year: "2020",
+    title: "Building the Foundation",
+    description:
+      "Expanded core teams, standardized training programs, and deepened UK client relationships as demand for reliable offshore support grew.",
+  },
+  {
     year: "2021",
     title: "UK Market Breakthrough",
     description:
@@ -24,10 +30,28 @@ const milestones = [
       "Crossed the 200-agent milestone, expanded to a second operations floor, and launched our proprietary QA monitoring system — all driven by surging UK client demand.",
   },
   {
+    year: "2023",
+    title: "Operational Excellence",
+    description:
+      "Strengthened QA and workforce development, added new service lines, and grew the client base across multiple UK sectors.",
+  },
+  {
     year: "2024",
     title: "Elite BPO Recognition",
     description:
       "Recognized as one of Egypt's premier BPO providers, serving 50+ clients across 4 continents — with the UK remaining our #1 market — and a 98% client retention rate.",
+  },
+  {
+    year: "2025",
+    title: "Continued Growth",
+    description:
+      "Scaled teams and capabilities to meet rising UK demand while maintaining industry-leading retention and service quality.",
+  },
+  {
+    year: "2026",
+    title: "Looking Ahead",
+    description:
+      "Entering our eighth year with expanded operations, deeper UK partnerships, and a continued commitment to delivering world-class outsourcing from Cairo.",
   },
 ];
 
@@ -57,7 +81,7 @@ export default function Story() {
                 className="font-heading font-bold text-ink dark:text-white leading-tight mt-3"
                 style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
               >
-                Five Years of
+                Eight Years of
                 <br />
                 <span className="text-gold-400">Relentless Growth</span>
               </h2>

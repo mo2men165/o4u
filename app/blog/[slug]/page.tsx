@@ -116,11 +116,11 @@ export default async function BlogPostPage({
     datePublished: meta.date,
     author: {
       "@type": "Organization",
-      name: "Outsourcing 4 You",
+      name: "O4U",
     },
     publisher: {
       "@type": "Organization",
-      name: "Outsourcing 4 You",
+      name: "O4U",
     },
     keywords: meta.keywords.join(", "),
   };
@@ -181,7 +181,7 @@ export default async function BlogPostPage({
                   Ready to Join Our Team?
                 </h3>
                 <p className="text-gray-600 dark:text-white/60 mt-2 font-body max-w-lg mx-auto">
-                  Explore exciting career opportunities at Outsourcing 4 You and
+                  Explore exciting career opportunities at O4U and
                   take the next step in your professional journey.
                 </p>
                 <Link
@@ -197,7 +197,7 @@ export default async function BlogPostPage({
                   Ready to Scale Your Business?
                 </h3>
                 <p className="text-gray-600 dark:text-white/60 mt-2 font-body max-w-lg mx-auto">
-                  Let us show you how Outsourcing 4 You can help you deliver
+                  Let us show you how O4U can help you deliver
                   exceptional customer experiences while reducing costs.
                 </p>
                 <Link

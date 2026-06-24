@@ -1,5 +1,5 @@
 export const COMPANY_INFO = {
-  name: "Outsourcing 4 You",
+  name: "O4U",
   shortName: "O4U",
   description:
     "Egypt's premier outsourcing partner — delivering exceptional customer service, sales, and back-office solutions to businesses worldwide.",
@@ -10,6 +10,7 @@ export const COMPANY_INFO = {
   socials: {
     linkedin: "https://www.linkedin.com/company/outsourcing-4-you/",
     facebook: "https://www.facebook.com/Outsourc4you",
+    instagram: "https://www.instagram.com/outsourcing4you/",
   },
   whatsapp: "https://wa.me/201273690006",
 };
@@ -235,19 +236,19 @@ export const SERVICE_FAQS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "We brought Outsourcing 4 You on board to handle our client pre-screening and outreach campaigns. Their team has been incredibly responsive and proactive — they adapted to our workflow within days and consistently deliver results that exceed our expectations.",
+      "We brought O4U on board to handle our client pre-screening and outreach campaigns. Their team has been incredibly responsive and proactive — they adapted to our workflow within days and consistently deliver results that exceed our expectations.",
     name: "Hellen Smith",
     location: "Michigan, USA",
   },
   {
     quote:
-      "We've been outsourcing our customer service operations to O4Y for over a year now, and the quality of service has been outstanding. Their agents are professional, well-trained, and their pricing is remarkably competitive for the level of talent they provide.",
+      "We've been outsourcing our customer service operations to O4U for over a year now, and the quality of service has been outstanding. Their agents are professional, well-trained, and their pricing is remarkably competitive for the level of talent they provide.",
     name: "Connor Quinn",
     location: "California, USA",
   },
   {
     quote:
-      "O4Y managed our outbound communication campaigns with a level of professionalism and efficiency that genuinely impressed us. Their team understood our brand voice from day one and executed each campaign with precision and care.",
+      "O4U managed our outbound communication campaigns with a level of professionalism and efficiency that genuinely impressed us. Their team understood our brand voice from day one and executed each campaign with precision and care.",
     name: "Jeff Murgatroyd",
     location: "New York, USA",
   },
@@ -279,7 +280,7 @@ export const EMPLOYEES = [
     joinYear: 2019,
     quote:
       "Operations is never boring. There's always something to improve, a system to tighten, a team to support. I've been doing this for six years and I'm still finding new problems worth solving.",
-    photo: "",
+    photo: "/employees/marwan.jpeg",
   },
   {
     name: "Mo'men Nasser",
@@ -382,7 +383,7 @@ export const VALUES = [
   },
 ] as const;
 
-export const WHY_O4Y = [
+export const WHY_O4U = [
   {
     title: "Strategic Thinking",
     description:

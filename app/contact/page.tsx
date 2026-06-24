@@ -6,11 +6,11 @@ import { COMPANY_INFO } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Outsourcing 4 You",
+  title: "Contact Us | O4U",
   description:
-    "Get in touch with Outsourcing 4 You — reach our Cairo office for business inquiries, partnership opportunities, or career questions.",
+    "Get in touch with O4U — reach our Cairo office for business inquiries, partnership opportunities, or career questions.",
   openGraph: {
-    title: "Contact Us | Outsourcing 4 You",
+    title: "Contact Us | O4U",
     description: "Start a conversation with Egypt's premier BPO partner. Business inquiries, partnerships, or careers — we're ready.",
     type: "website",
   },

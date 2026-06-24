@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogSlugs = [
     '5-reasons-call-center-career',
     'outsourcing-customer-service-scale-business',
-    'day-in-the-life-at-o4y',
+    'day-in-the-life-at-o4u',
     'future-of-bpo-trends',
   ];
 

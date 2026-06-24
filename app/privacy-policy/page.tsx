@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 import { COMPANY_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Outsourcing 4 You",
+  title: "Privacy Policy | O4U",
   description: `Privacy Policy for ${COMPANY_INFO.name}. Learn how we collect, use, and protect your personal information.`,
 };
 

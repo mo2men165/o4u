@@ -52,7 +52,7 @@ const differentiators = [
   },
 ];
 
-export default function WhyO4Y() {
+export default function WhyO4U() {
   const statsRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const statsInView = useInView(statsRef, { once: true, margin: "-60px" });

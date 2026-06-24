@@ -113,7 +113,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="mt-6 text-lg font-body text-ink/60 dark:text-white/60 leading-relaxed max-w-xl"
             >
-              Outsourcing 4 You delivers dedicated, multilingual teams across
+              O4U delivers dedicated, multilingual teams across
               customer service, sales, and back-office operations — to clients
               across the UK, Europe, and beyond.
             </motion.p>

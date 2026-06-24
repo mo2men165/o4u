@@ -10,6 +10,7 @@
     "seed:jobs": "tsx scripts/seed-jobs.ts"
   },
   "dependencies": {
+    "@alloc/quick-lru": "^5.2.0",
     "@formspree/react": "^3.0.0",
     "@next/third-parties": "^16.2.9",
     "@tailwindcss/typography": "^0.5.20",

@@ -22,7 +22,7 @@ export async function generateMetadata({
   const data = SERVICE_PAGE_DATA[slug];
   if (!data) return {};
   return {
-    title: `${data.title} | Outsourcing 4 You`,
+    title: `${data.title} | O4U`,
     description: data.heroDescription,
   };
 }

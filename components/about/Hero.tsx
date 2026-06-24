@@ -9,7 +9,7 @@ import { Container } from "@/components/ui";
 const badges = [
   { icon: MapPin, text: "Cairo, Egypt" },
   { icon: Globe2, text: "4 Continents Served" },
-  { icon: Award, text: "5+ Years of Excellence" },
+  { icon: Award, text: "8+ Years of Excellence" },
 ];
 
 const headingLine1 = ["Built", "in", "Cairo."];

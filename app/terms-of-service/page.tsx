@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 import { COMPANY_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Outsourcing 4 You",
+  title: "Terms of Service | O4U",
   description: `Terms of Service for ${COMPANY_INFO.name}. Read our terms and conditions for using our website and services.`,
 };
 

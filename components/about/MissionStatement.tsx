@@ -27,7 +27,7 @@ export default function MissionStatement() {
           </p>
           <footer className="mt-6">
             <span className="font-heading text-sm font-semibold text-white/60 uppercase tracking-widest">
-              — Outsourcing 4 You, Founded 2014
+              — O4U, Founded 2014
             </span>
           </footer>
         </motion.blockquote>

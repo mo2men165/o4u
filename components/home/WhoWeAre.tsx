@@ -30,7 +30,7 @@ export default function WhoWeAre() {
 
             <div className="mt-6 space-y-4 font-body text-gray-600 leading-relaxed">
               <p>
-                Outsourcing 4 You is a Cairo-based outsourcing company built on
+                O4U is a Cairo-based outsourcing company built on
                 a simple belief: great talent exists everywhere, and businesses
                 deserve access to it without the overhead.
               </p>

@@ -20,7 +20,7 @@ export default function Map() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Outsourcing 4 You office location"
+        title="O4U office location"
         onLoad={() => setIsLoading(false)}
       />
     </div>

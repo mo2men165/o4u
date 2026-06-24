@@ -4,13 +4,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Outsourcing 4 You",
-    default: "Outsourcing 4 You — Egypt's Premier Outsourcing Partner",
+    template: "%s | O4U",
+    default: "O4U — Egypt's Premier Outsourcing Partner",
   },
   description:
-    "Outsourcing 4 You is Egypt's premier outsourcing partner, delivering exceptional customer service, sales, and back-office solutions to businesses worldwide.",
+    "O4U is Egypt's premier outsourcing partner, delivering exceptional customer service, sales, and back-office solutions to businesses worldwide.",
   openGraph: {
-    siteName: "Outsourcing 4 You",
+    siteName: "O4U",
     type: "website",
     locale: "en_US",
   },
