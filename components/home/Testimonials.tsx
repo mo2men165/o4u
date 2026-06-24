@@ -7,9 +7,12 @@ import { Container } from "@/components/ui";
 import { TESTIMONIALS } from "@/lib/constants";
 
 const locations: Record<string, string> = {
-  "Michigan, USA": "MI",
-  "California, USA": "CA",
-  "New York, USA": "NY",
+  "Michigan, USA": "US",
+  "California, USA": "US",
+  "London, England": "UK",
+  "Manchester, England": "UK",
+  "Edinburgh, Scotland": "UK",
+  "Dubai, UAE": "AE",
 };
 
 export default function Testimonials() {
@@ -24,7 +27,7 @@ export default function Testimonials() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           ref={ref}
-          className="text-center mb-14"
+          className="text-center mb-10"
         >
           <span className="inline-flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-gold-400 mb-3">
             <span className="h-1.5 w-1.5 rounded-full bg-gold-500" />
@@ -38,42 +41,40 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={t.name}
-              initial={{ opacity: 0, y: 32 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.15 + i * 0.12 }}
-              className="bg-white dark:bg-primary-900 border border-gray-200 dark:border-primary-700/40 rounded-2xl p-8 flex flex-col hover:border-primary-400/25 transition-colors duration-300 shadow-soft dark:shadow-none"
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+              className="bg-white dark:bg-primary-900 border border-gray-200 dark:border-primary-700/40 rounded-xl p-5 flex flex-col hover:border-primary-400/25 transition-colors duration-300 shadow-soft dark:shadow-none"
             >
-              <Quote className="w-8 h-8 text-gold-500/50 mb-5" strokeWidth={1.5} />
+              <Quote className="w-5 h-5 text-gold-500/50 mb-3" strokeWidth={1.5} />
 
-              {/* Stars */}
-              <div className="flex gap-1 mb-5">
+              <div className="flex gap-0.5 mb-3">
                 {Array(5).fill(0).map((_, s) => (
-                  <Star key={s} className="w-4 h-4 text-gold-400 fill-gold-400" />
+                  <Star key={s} className="w-3 h-3 text-gold-400 fill-gold-400" />
                 ))}
               </div>
 
-              <p className="font-body text-ink/70 dark:text-white/70 leading-relaxed text-sm flex-1 mb-8">
+              <p className="font-body text-ink/70 dark:text-white/70 leading-relaxed text-xs flex-1 mb-4">
                 "{t.quote}"
               </p>
 
-              <div className="flex items-center gap-3 border-t border-black/8 dark:border-white/8 pt-6">
-                {/* Avatar placeholder — gradient monogram */}
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center flex-shrink-0">
-                  <span className="font-heading font-bold text-white text-sm">
+              <div className="flex items-center gap-2.5 border-t border-black/8 dark:border-white/8 pt-4">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center flex-shrink-0">
+                  <span className="font-heading font-bold text-white text-xs">
                     {t.name.split(" ").map((n) => n[0]).join("")}
                   </span>
                 </div>
-                <div>
-                  <div className="font-heading font-semibold text-ink dark:text-white text-sm">{t.name}</div>
-                  <div className="font-body text-ink/40 dark:text-white/40 text-xs">{t.location}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="font-heading font-semibold text-ink dark:text-white text-xs truncate">{t.name}</div>
+                  <div className="font-body text-ink/40 dark:text-white/40 text-[11px] truncate">{t.location}</div>
                 </div>
-                <div className="ml-auto w-8 h-8 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0">
-                  <span className="font-heading font-bold text-gold-400 text-[10px]">
-                    {locations[t.location] ?? "US"}
+                <div className="w-7 h-7 rounded-md bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0">
+                  <span className="font-heading font-bold text-gold-400 text-[9px]">
+                    {locations[t.location] ?? "—"}
                   </span>
                 </div>
               </div>

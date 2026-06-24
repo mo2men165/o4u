@@ -248,9 +248,27 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "O4U managed our outbound communication campaigns with a level of professionalism and efficiency that genuinely impressed us. Their team understood our brand voice from day one and executed each campaign with precision and care.",
-    name: "Jeff Murgatroyd",
-    location: "New York, USA",
+      "O4U took over our lead qualification and appointment-setting with minimal onboarding friction. The team understood our market quickly and has become a reliable extension of our sales operation.",
+    name: "James Whitfield",
+    location: "London, England",
+  },
+  {
+    quote:
+      "From day one, O4U's agents sounded like part of our in-house team. Consistent follow-up, clear reporting, and a professionalism that made outsourcing feel like a genuine partnership.",
+    name: "Emily Hartley",
+    location: "Manchester, England",
+  },
+  {
+    quote:
+      "We needed dependable outbound support without sacrificing quality — O4U delivered exactly that. Their responsiveness and attention to detail have made a real difference to our pipeline.",
+    name: "Andrew MacLeod",
+    location: "Edinburgh, Scotland",
+  },
+  {
+    quote:
+      "Operating across time zones is never easy, but O4U made it seamless. Their team handles our client outreach with the same standards we expect locally — professional, punctual, and results-driven.",
+    name: "Sarah Al-Rashid",
+    location: "Dubai, UAE",
   },
 ] as const;
 
