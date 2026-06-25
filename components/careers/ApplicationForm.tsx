@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type FormEvent, type ChangeEvent } from "react";
-import { useForm } from "@formspree/react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import { Upload, Send } from "lucide-react";
 import { Container } from "@/components/ui";
@@ -54,40 +53,16 @@ export default function ApplicationForm({
   embedded,
   jobOptions = [],
 }: ApplicationFormProps) {
-  const [formspreeState, handleFormspreeSubmit] = useForm("meeboybk");
   const [localData, setLocalData] = useState<LocalFormData>({
     ...initialFormData,
     position: preselectedPosition ?? "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [uploading, setUploading] = useState(false);
-  const [uploadError, setUploadError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [succeeded, setSucceeded] = useState(false);
   const [audioResetKey, setAudioResetKey] = useState(0);
-  const firestoreSaved = useRef(false);
-  const pendingData = useRef<
-    Omit<LocalFormData, "cv" | "audio"> & {
-      cvFileName: string;
-      cvUrl: string;
-      audioFileName: string;
-      audioUrl: string;
-    } | null
-  >(null);
-
-  useEffect(() => {
-    if (formspreeState.succeeded && !firestoreSaved.current && pendingData.current) {
-      firestoreSaved.current = true;
-      fetch("/api/apply", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(pendingData.current),
-      }).catch(console.error);
-      pendingData.current = null;
-      setLocalData({ ...initialFormData, position: preselectedPosition ?? "" });
-      setAudioResetKey((k) => k + 1);
-      const fileInput = document.getElementById("cv-upload") as HTMLInputElement | null;
-      if (fileInput) fileInput.value = "";
-    }
-  }, [formspreeState.succeeded, preselectedPosition]);
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
@@ -119,20 +94,27 @@ export default function ApplicationForm({
     const file = e.target.files?.[0] || null;
     setLocalData((prev) => ({ ...prev, cv: file }));
     if (errors.cv) setErrors((prev) => ({ ...prev, cv: undefined }));
-    if (uploadError) setUploadError(null);
+    if (submitError) setSubmitError(null);
   };
 
   const handleAudioChange = (file: File | null) => {
     setLocalData((prev) => ({ ...prev, audio: file }));
     if (errors.audio) setErrors((prev) => ({ ...prev, audio: undefined }));
-    if (uploadError) setUploadError(null);
+    if (submitError) setSubmitError(null);
+  };
+
+  const resetForm = () => {
+    setLocalData({ ...initialFormData, position: preselectedPosition ?? "" });
+    setAudioResetKey((k) => k + 1);
+    const fileInput = document.getElementById("cv-upload") as HTMLInputElement | null;
+    if (fileInput) fileInput.value = "";
   };
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate()) return;
 
-    setUploadError(null);
+    setSubmitError(null);
 
     let cvUrl = "";
     let audioUrl = "";
@@ -170,37 +152,44 @@ export default function ApplicationForm({
       await Promise.all(uploads);
     } catch (err) {
       setUploading(false);
-      setUploadError(err instanceof Error ? err.message : "Failed to upload files. Please try again.");
+      setSubmitError(err instanceof Error ? err.message : "Failed to upload files. Please try again.");
       return;
     }
     setUploading(false);
 
-    // Submit text fields + file links to Formspree (no file attachments)
-    const fsData = new FormData();
-    fsData.append("Full Name", localData.fullName);
-    fsData.append("Email", localData.email);
-    fsData.append("Phone", localData.phone);
-    fsData.append("Position", localData.position);
-    if (localData.coverMessage) fsData.append("Cover Message", localData.coverMessage);
-    if (cvUrl) fsData.append("CV Link", cvUrl);
-    if (audioUrl) fsData.append("Audio Link", audioUrl);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: localData.fullName,
+          email: localData.email,
+          phone: localData.phone,
+          position: localData.position,
+          coverMessage: localData.coverMessage,
+          cvFileName: localData.cv?.name ?? "",
+          cvUrl,
+          audioFileName: localData.audio?.name ?? "",
+          audioUrl,
+        }),
+      });
 
-    pendingData.current = {
-      fullName: localData.fullName,
-      email: localData.email,
-      phone: localData.phone,
-      position: localData.position,
-      coverMessage: localData.coverMessage,
-      cvFileName: localData.cv?.name ?? "",
-      cvUrl,
-      audioFileName: localData.audio?.name ?? "",
-      audioUrl,
-    };
+      const json = await res.json();
+      if (!res.ok) {
+        throw new Error(json.error ?? "Failed to submit application.");
+      }
 
-    handleFormspreeSubmit(fsData);
+      setSucceeded(true);
+      resetForm();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const isLoading = uploading || formspreeState.submitting;
+  const isLoading = uploading || submitting;
 
   const inputBase =
     "w-full rounded-xl border bg-white dark:bg-white/5 px-4 py-3 font-body text-ink dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/30 focus:outline-none focus:ring-2 transition-all duration-200 text-sm";
@@ -210,7 +199,7 @@ export default function ApplicationForm({
   const fieldClass = (field: keyof FormErrors) =>
     errors[field] ? inputError : inputNormal;
 
-  const formEl = formspreeState.succeeded ? (
+  const formEl = succeeded ? (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
@@ -221,7 +210,7 @@ export default function ApplicationForm({
         Application Received!
       </p>
       <p className="font-body text-ink/60 dark:text-white/60 text-sm">
-        Thank you for applying. Our HR team will review your application and get back to you within 2 business days.
+        Thank you for applying. We&apos;ve sent a confirmation to your email, and our HR team will review your application and get back to you within 2 business days.
       </p>
     </motion.div>
   ) : (
@@ -234,9 +223,9 @@ export default function ApplicationForm({
       className="space-y-5 rounded-2xl border border-gray-200 dark:border-primary-700/50 bg-white dark:bg-primary-800 shadow-soft dark:shadow-none p-8 md:p-10"
       noValidate
     >
-      {(formspreeState.errors != null || uploadError) && (
+      {submitError && (
         <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 font-body text-red-400 text-sm">
-          {uploadError ?? "Something went wrong. Please try again or contact us directly."}
+          {submitError}
         </div>
       )}
 
@@ -338,7 +327,7 @@ export default function ApplicationForm({
         >
           <Upload className="w-4 h-4 text-ink/40 dark:text-white/40 shrink-0" />
           <span className="font-body text-sm text-ink/40 dark:text-white/40">
-            {localData.cv ? localData.cv.name : "PDF, DOC, or DOCX — max 5MB"}
+            {localData.cv ? localData.cv.name : "PDF, DOC, or DOCX, max 5MB"}
           </span>
           <input
             type="file"
@@ -384,7 +373,7 @@ export default function ApplicationForm({
         disabled={isLoading}
         className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 hover:bg-primary-400 disabled:opacity-60 disabled:cursor-not-allowed px-6 py-4 font-heading text-sm font-bold text-white transition-all duration-200 hover:shadow-glow cursor-pointer"
       >
-        {uploading ? "Uploading files..." : formspreeState.submitting ? "Submitting..." : (
+        {uploading ? "Uploading files..." : submitting ? "Submitting..." : (
           <>
             Submit Application
             <Send className="w-4 h-4" />

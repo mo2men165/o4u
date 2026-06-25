@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     const file = storageBucket.file(path);
     await file.save(buffer, { contentType: cv.type, resumable: false });
 
-    // Signed URL valid for 10 years — long enough for HR review purposes
+    // Signed URL valid for 10 years, long enough for HR review purposes
     const [url] = await file.getSignedUrl({
       action: 'read',
       expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000),

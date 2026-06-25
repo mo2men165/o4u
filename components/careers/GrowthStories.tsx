@@ -46,7 +46,7 @@ export default function GrowthStories() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-ink/70 dark:text-white/50 text-base mt-4 max-w-xl mx-auto"
           >
-            Not testimonials from a brochure — these are real people who started as agents and now lead teams.
+            Not testimonials from a brochure, these are real people who started as agents and now lead teams.
           </motion.p>
         </div>
 

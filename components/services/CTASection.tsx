@@ -34,7 +34,7 @@ export default function CTASection() {
           className="font-heading font-bold text-ink dark:text-white leading-tight max-w-3xl mx-auto"
           style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
         >
-          Tell Us What You Need —{" "}
+          Tell Us What You Need.{" "}
           <span className="text-gold-400">We&apos;ll Build It.</span>
         </motion.h2>
 
@@ -45,7 +45,7 @@ export default function CTASection() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="font-body text-ink/60 dark:text-white/60 text-lg mt-5 max-w-xl mx-auto leading-relaxed"
         >
-          Every outsourcing solution we build is custom-designed for your business. No templates, no one-size-fits-all — just results.
+          Every outsourcing solution we build is custom designed for your business. No templates, no one size fits all, just results.
         </motion.p>
 
         <motion.div

@@ -81,7 +81,7 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Word-by-word headline — 3 lines */}
+        {/* Word-by-word headline, 3 lines */}
         <h1
           className="font-heading font-bold text-ink dark:text-white tracking-tight leading-[1.1] max-w-4xl"
           style={{ fontSize: "clamp(2.6rem, 5vw, 4.5rem)" }}
@@ -113,7 +113,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="mt-6 font-body text-lg md:text-xl text-ink/60 dark:text-white/60 leading-relaxed max-w-2xl"
         >
-          At O4U, we don&apos;t just offer jobs — we offer a launchpad. Join a team of 250+ professionals who are building careers, not just clocking hours.
+          At O4U, we don&apos;t just offer jobs. We offer a launchpad. Join a team of 250+ professionals who are building careers, not just clocking hours.
         </motion.p>
 
         {/* Stat cards */}

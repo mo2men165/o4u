@@ -72,7 +72,7 @@ export default function Perks() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-ink/50 dark:text-white/50 text-base mt-4 max-w-xl mx-auto leading-relaxed"
           >
-            We invest in our people because when they grow, our clients grow, and O4U grows. These are not just perks — they are commitments.
+            We invest in our people because when they grow, our clients grow, and O4U grows. These are not just perks, they are commitments.
           </motion.p>
         </div>
 

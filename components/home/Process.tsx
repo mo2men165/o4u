@@ -11,7 +11,7 @@ const steps = [
     icon: PhoneCall,
     title: "Tell Us Your Needs",
     description:
-      "Book a free consultation. We learn your business, goals, and pain points — then design a custom outsourcing plan.",
+      "Book a free consultation. We learn your business, goals, and pain points, then design a custom outsourcing plan.",
   },
   {
     number: "02",
@@ -58,7 +58,7 @@ export default function Process() {
             Our Process
           </span>
           <h2 className="font-heading font-bold text-ink dark:text-white tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)" }}>
-            From conversation to full team — in 2 weeks
+            From conversation to full team, in 2 weeks
           </h2>
         </motion.div>
 

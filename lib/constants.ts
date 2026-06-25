@@ -2,11 +2,11 @@ export const COMPANY_INFO = {
   name: "O4U",
   shortName: "O4U",
   description:
-    "Egypt's premier outsourcing partner — delivering exceptional customer service, sales, and back-office solutions to businesses worldwide.",
+    "Egypt's premier outsourcing partner, delivering exceptional customer service, sales, and back office solutions to businesses worldwide.",
   address: "86A 260 Street, Maadi, Cairo, Egypt",
   phone: "+20 127 369 0006",
   email: "info@outsourcing-4-you.com",
-  workingHours: "Mon-Fri, 11:00 AM – 8:00 PM (EG Time)",
+  workingHours: "Mon-Fri, 11:00 AM to 8:00 PM (EG Time)",
   socials: {
     linkedin: "https://www.linkedin.com/company/outsourcing-4-you/",
     facebook: "https://www.facebook.com/Outsourc4you",
@@ -52,37 +52,37 @@ export const SERVICES = [
   {
     id: "lead-generation",
     title: "Lead Generation",
-    description: "Our outreach specialists use proven strategies to identify and engage high-quality prospects for your business. We enhance your sales pipeline through targeted campaigns and data-driven prospecting techniques.",
+    description: "Our outreach specialists use proven strategies to identify and engage high-quality prospects for your business. We enhance your sales pipeline through targeted campaigns and data backed prospecting techniques.",
     icon: "Target",
     benefits: ["Targeted prospect identification", "Multi-channel outreach", "CRM integration", "Qualified lead delivery"],
   },
   {
     id: "telesales-upselling",
     title: "Telesales & Upselling",
-    description: "Our skilled sales agents identify cross-selling and upselling opportunities to maximise customer lifetime value. We combine persuasive communication with deep product knowledge to drive revenue growth.",
+    description: "Our skilled sales agents identify cross selling and upselling opportunities to maximise customer lifetime value. We combine persuasive communication with deep product knowledge to drive revenue growth.",
     icon: "TrendingUp",
-    benefits: ["Revenue optimisation strategies", "Cross-sell identification", "Customer retention programmes", "Performance-based metrics"],
+    benefits: ["Revenue optimisation strategies", "Cross-sell identification", "Customer retention programmes", "Performance based metrics"],
   },
   {
     id: "data-entry",
     title: "Data Entry",
     description: "We deliver accurate, efficient data processing services that keep your operations running smoothly. Our team handles large volumes of data with meticulous attention to detail and strict quality controls.",
     icon: "Database",
-    benefits: ["99.9% accuracy guarantee", "High-volume processing", "Multiple format support", "Secure data handling"],
+    benefits: ["99.9% accuracy guarantee", "High volume processing", "Multiple format support", "Secure data handling"],
   },
   {
     id: "market-research",
     title: "Market Research Surveys",
     description: "We gather actionable feedback through professionally conducted surveys that measure brand awareness, customer satisfaction, and market trends. Our insights help you make informed product and business decisions.",
     icon: "BarChart3",
-    benefits: ["Custom survey design", "Multi-language capability", "Real-time reporting", "Actionable insights"],
+    benefits: ["Custom survey design", "Multi language capability", "Real time reporting", "Actionable insights"],
   },
   {
     id: "email-chat-support",
     title: "Email/Chat Support",
     description: "Our agents provide fast, professional written communication across email and live chat channels. We ensure consistent brand voice and timely responses that keep customers engaged and satisfied.",
     icon: "MessageSquare",
-    benefits: ["Sub-60-second chat response", "Template-driven consistency", "Multi-platform integration", "Sentiment analysis"],
+    benefits: ["Under 60 second chat response", "Template driven consistency", "Multi platform integration", "Sentiment analysis"],
   },
   {
     id: "recruitment-support",
@@ -101,7 +101,7 @@ export const SERVICES = [
   {
     id: "back-office-support",
     title: "Back Office Support",
-    description: "We handle essential administrative tasks so your team can focus on core business activities. From document processing to reporting, our back-office team keeps your operations efficient and organised.",
+    description: "We handle essential administrative tasks so your team can focus on core business activities. From document processing to reporting, our back office team keeps your operations efficient and organised.",
     icon: "Briefcase",
     benefits: ["Document management", "Invoice processing", "Report generation", "Administrative coordination"],
   },
@@ -140,7 +140,7 @@ export const INDUSTRIES = [
     id: "technology",
     title: "Technology",
     description:
-      "Technical helpdesk, SaaS onboarding, and tier-1 support for software companies.",
+      "Technical helpdesk, SaaS onboarding, and tier 1 support for software companies.",
     icon: "Cpu",
   },
   {
@@ -204,7 +204,7 @@ export const SERVICE_FAQS = [
   {
     question: "How do you ensure quality and performance?",
     answer:
-      "We implement rigorous QA processes including call monitoring, regular performance reviews, KPI tracking, and real-time dashboards. Our dedicated quality assurance team conducts daily audits to maintain the highest standards.",
+      "We implement rigorous QA processes including call monitoring, regular performance reviews, KPI tracking, and real time dashboards. Our dedicated quality assurance team conducts daily audits to maintain the highest standards.",
   },
   {
     question: "Can I scale my team up or down as needed?",
@@ -229,14 +229,14 @@ export const SERVICE_FAQS = [
   {
     question: "Can we visit your office?",
     answer:
-      "We welcome client visits to our Maadi, Cairo facility. Seeing our operations first-hand gives you confidence in our team, technology, and processes. Contact us to schedule a tour at a time that works for you.",
+      "We welcome client visits to our Maadi, Cairo facility. Seeing our operations first hand gives you confidence in our team, technology, and processes. Contact us to schedule a tour at a time that works for you.",
   },
 ] as const;
 
 export const TESTIMONIALS = [
   {
     quote:
-      "We brought O4U on board to handle our client pre-screening and outreach campaigns. Their team has been incredibly responsive and proactive — they adapted to our workflow within days and consistently deliver results that exceed our expectations.",
+      "We brought O4U on board to handle our client screening and outreach campaigns. Their team has been incredibly responsive and proactive. They adapted to our workflow within days and consistently deliver results that exceed our expectations.",
     name: "Hellen Smith",
     location: "Michigan, USA",
   },
@@ -248,25 +248,25 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "O4U took over our lead qualification and appointment-setting with minimal onboarding friction. The team understood our market quickly and has become a reliable extension of our sales operation.",
+      "O4U took over our lead qualification and appointment setting with minimal onboarding friction. The team understood our market quickly and has become a reliable extension of our sales operation.",
     name: "James Whitfield",
     location: "London, England",
   },
   {
     quote:
-      "From day one, O4U's agents sounded like part of our in-house team. Consistent follow-up, clear reporting, and a professionalism that made outsourcing feel like a genuine partnership.",
+      "From day one, O4U's agents sounded like part of our in house team. Consistent follow-up, clear reporting, and a professionalism that made outsourcing feel like a genuine partnership.",
     name: "Emily Hartley",
     location: "Manchester, England",
   },
   {
     quote:
-      "We needed dependable outbound support without sacrificing quality — O4U delivered exactly that. Their responsiveness and attention to detail have made a real difference to our pipeline.",
+      "We needed dependable outbound support without sacrificing quality, O4U delivered exactly that. Their responsiveness and attention to detail have made a real difference to our pipeline.",
     name: "Andrew MacLeod",
     location: "Edinburgh, Scotland",
   },
   {
     quote:
-      "Operating across time zones is never easy, but O4U made it seamless. Their team handles our client outreach with the same standards we expect locally — professional, punctual, and results-driven.",
+      "Operating across time zones is never easy, but O4U made it seamless. Their team handles our client outreach with the same standards we expect locally: professional, punctual, and results driven.",
     name: "Sarah Al-Rashid",
     location: "Dubai, UAE",
   },
@@ -279,7 +279,7 @@ export const EMPLOYEES = [
     startedAs: "Telesales Agent",
     joinYear: 2020,
     quote:
-      "What drives me every day is watching someone click. Seeing a person go from uncertain to confident — that's what L&D is about. O4U gave me the space to build that culture.",
+      "What drives me every day is watching someone click. Seeing a person go from uncertain to confident, that's what L&D is about. O4U gave me the space to build that culture.",
     photo: "/employees/tommy.jpeg",
   },
   {
@@ -288,7 +288,7 @@ export const EMPLOYEES = [
     startedAs: "Telesales Agent",
     joinYear: 2021,
     quote:
-      "I genuinely enjoy the strategy side — figuring out why a campaign works, what to fix, what to push harder. O4U lets you own your decisions and learn from them.",
+      "I genuinely enjoy the strategy side, figuring out why a campaign works, what to fix, what to push harder. O4U lets you own your decisions and learn from them.",
     photo: "/employees/abeer.jpeg",
   },
   {
@@ -315,7 +315,7 @@ export const EMPLOYEES = [
     startedAs: "Telesales Agent",
     joinYear: 2024,
     quote:
-      "Quality isn't about catching people out — it's about raising the standard together. O4U understood that from day one, and it's why I was happy to step into this role.",
+      "Quality isn't about catching people out, it's about raising the standard together. O4U understood that from day one, and it's why I was happy to step into this role.",
     photo: "/employees/fatma_ghazali.jpg",
   },
   {
@@ -324,7 +324,7 @@ export const EMPLOYEES = [
     startedAs: "Telesales Agent",
     joinYear: 2021,
     quote:
-      "Retention is underrated. Closing is exciting, but keeping a client — that's where the real skill is. I built this department around that belief, and the results speak for themselves.",
+      "Retention is underrated. Closing is exciting, but keeping a client, that's where the real skill is. I built this department around that belief, and the results speak for themselves.",
     photo: "/employees/maryam.jpg",
   },
   {
@@ -342,7 +342,7 @@ export const EMPLOYEES = [
     startedAs: "Telesales Agent",
     joinYear: 2022,
     quote:
-      "I remember what it felt like on day one — overwhelmed, unsure where to start. Everything I build at the Academy is designed to make that feeling last as short as possible for others.",
+      "I remember what it felt like on day one, overwhelmed, unsure where to start. Everything I build at the Academy is designed to make that feeling last as short as possible for others.",
     photo: "/employees/esraa.jpeg",
   },
 ] as const;
@@ -382,7 +382,7 @@ export const VALUES = [
   {
     title: "Respect",
     description:
-      "We value every individual — our clients, our team, and the communities we serve. Mutual respect is the foundation of every relationship we build.",
+      "We value every individual, our clients, our team, and the communities we serve. Mutual respect is the foundation of every relationship we build.",
   },
   {
     title: "Integrity",
@@ -392,7 +392,7 @@ export const VALUES = [
   {
     title: "Quality",
     description:
-      "We pursue excellence relentlessly. Every deliverable, every process, and every conversation reflects our commitment to world-class standards.",
+      "We pursue excellence relentlessly. Every deliverable, every process, and every conversation reflects our commitment to excellent standards.",
   },
   {
     title: "Flexibility",
@@ -415,7 +415,7 @@ export const WHY_O4U = [
   {
     title: "Innovation",
     description:
-      "We leverage cutting-edge tools, AI-driven workflows, and continuous improvement methodologies to keep you ahead of the competition.",
+      "We leverage modern tools, smart workflows, and continuous improvement methodologies to keep you ahead of the competition.",
   },
   {
     title: "Transparent Communication",
@@ -432,13 +432,13 @@ export const PERKS = [
     icon: "TrendingUp",
   },
   {
-    title: "World-Class Training Programmes",
+    title: "World Class Training Programmes",
     description:
       "Comprehensive onboarding and continuous skill development. Our training academy covers communication, technology, and industry-specific knowledge.",
     icon: "GraduationCap",
   },
   {
-    title: "Team-First Culture",
+    title: "Team Centred Culture",
     description:
       "Join a supportive, collaborative environment where your voice matters. We celebrate wins together and support each other through challenges.",
     icon: "Users",
@@ -466,12 +466,12 @@ export const PERKS = [
 export const JOB_POSTINGS = [
   {
     id: "cs-agent-en",
-    title: "Customer Service Agent — English",
+    title: "Customer Service Agent (English)",
     department: "Customer Service",
     type: "Full-time",
     description:
-      "Handle inbound customer inquiries via phone, email, and chat for our international clients. Provide exceptional support while maintaining quality standards and first-call resolution targets. Requires fluent English and strong communication skills.",
-    shortDescription: "Provide world-class support for international clients via phone, email, and chat.",
+      "Handle inbound customer inquiries via phone, email, and chat for our international clients. Provide exceptional support while maintaining quality standards and first call resolution targets. Requires fluent English and strong communication skills.",
+    shortDescription: "Provide excellent support for international clients via phone, email, and chat.",
   },
   {
     id: "senior-sales-rep",
@@ -479,7 +479,7 @@ export const JOB_POSTINGS = [
     department: "Sales",
     type: "Full-time",
     description:
-      "Drive revenue through outbound sales campaigns, upselling, and cross-selling to existing client bases. Mentor junior team members and contribute to sales strategy development. Requires 2+ years of telesales experience.",
+      "Drive revenue through outbound sales campaigns, upselling, and cross selling to existing client bases. Mentor junior team members and contribute to sales strategy development. Requires 2+ years of telesales experience.",
     shortDescription: "Lead outbound sales campaigns and mentor junior team members.",
   },
   {
@@ -524,7 +524,7 @@ export const CAREER_FAQS = [
   {
     question: "What does the interview process look like?",
     answer:
-      "Our interview process consists of three stages: an initial phone screening, a skills assessment (language and scenario-based), and a final interview with the hiring manager. The entire process typically takes 5-7 business days.",
+      "Our interview process consists of three stages: an initial phone screening, a skills assessment (language and scenario based), and a final interview with the hiring manager. The entire process typically takes 5-7 business days.",
   },
   {
     question: "Do I need prior call centre experience?",

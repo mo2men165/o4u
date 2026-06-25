@@ -37,7 +37,7 @@ export default function WhoWeAre() {
               <p>
                 Since our founding, we have partnered with companies across the
                 US, Europe, and the Middle East to deliver customer support,
-                sales, back-office operations, and more — all powered by
+                sales, back office operations, and more, all powered by
                 Egypt&apos;s vibrant, multilingual workforce.
               </p>
               <p>

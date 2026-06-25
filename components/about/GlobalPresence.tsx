@@ -55,7 +55,7 @@ export default function GlobalPresence() {
               className="font-heading font-bold text-ink dark:text-white mt-3 leading-tight"
               style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)" }}
             >
-              Cairo to the World —<br />
+              Cairo to the World<br />
               <span className="text-primary-500 dark:text-primary-300">50+ Clients, 4 Continents</span>
             </motion.h2>
           </div>
@@ -66,8 +66,8 @@ export default function GlobalPresence() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-gray-600 dark:text-white/50 text-base leading-relaxed"
           >
-            Our operations hub is in Maadi, Cairo — but our impact stretches across
-            four continents. We serve clients from global enterprises to fast-growing
+            Our operations hub is in Maadi, Cairo, but our impact stretches across
+            four continents. We serve clients from global enterprises to fast growing
             startups, delivering consistent excellence regardless of time zone.
           </motion.p>
         </div>

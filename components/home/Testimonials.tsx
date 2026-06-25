@@ -37,7 +37,7 @@ export default function Testimonials() {
             Trusted by businesses across the globe
           </h2>
           <p className="font-body text-ink/50 dark:text-white/50 mt-4 max-w-xl mx-auto">
-            Real results, real relationships — here's what our clients say about working with O4U.
+            Real results, real relationships. Here&apos;s what our clients say about working with O4U.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ export default function Testimonials() {
                 </div>
                 <div className="w-7 h-7 rounded-md bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0">
                   <span className="font-heading font-bold text-gold-400 text-[9px]">
-                    {locations[t.location] ?? "—"}
+                    {locations[t.location] ?? "?"}
                   </span>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const milestones = [
     year: "2019",
     title: "The Beginning",
     description:
-      "Founded in Maadi, Cairo with a dedicated team and a bold vision — deliver world-class outsourcing to UK businesses. Our first client was a fast-growing UK e-commerce brand that needed native-level English support.",
+      "Founded in Maadi, Cairo with a dedicated team and a bold vision to deliver excellent outsourcing to UK businesses. Our first client was a fast growing UK ecommerce brand that needed native level English support.",
   },
   {
     year: "2020",
@@ -21,13 +21,13 @@ const milestones = [
     year: "2021",
     title: "UK Market Breakthrough",
     description:
-      "Secured major contracts with clients across England and Scotland. Built dedicated British English teams with native-level training tailored to UK consumer markets and regulatory standards.",
+      "Secured major contracts with clients across England and Scotland. Built dedicated British English teams with native level training tailored to UK consumer markets and regulatory standards.",
   },
   {
     year: "2022",
     title: "Scale Up",
     description:
-      "Crossed the 200-agent milestone, expanded to a second operations floor, and launched our proprietary QA monitoring system — all driven by surging UK client demand.",
+      "Crossed the 200-agent milestone, expanded to a second operations floor, and launched our proprietary QA monitoring system, all driven by surging UK client demand.",
   },
   {
     year: "2023",
@@ -39,7 +39,7 @@ const milestones = [
     year: "2024",
     title: "Elite BPO Recognition",
     description:
-      "Recognised as one of Egypt's premier BPO providers, serving 50+ clients across 4 continents — with the UK remaining our #1 market — and a 98% client retention rate.",
+      "Recognised as one of Egypt's premier BPO providers, serving 50+ clients across 4 continents, with the UK remaining our #1 market, and a 98% client retention rate.",
   },
   {
     year: "2025",
@@ -51,7 +51,7 @@ const milestones = [
     year: "2026",
     title: "Looking Ahead",
     description:
-      "Entering our eighth year with expanded operations, deeper UK partnerships, and a continued commitment to delivering world-class outsourcing from Cairo.",
+      "Entering our eighth year with expanded operations, deeper UK partnerships, and a continued commitment to delivering excellent outsourcing from Cairo.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function Story() {
                 <span className="text-gold-400">Relentless Growth</span>
               </h2>
               <p className="font-body text-ink/50 dark:text-white/50 text-base leading-relaxed mt-5 max-w-xs">
-                From a single office in Cairo to a global outsourcing powerhouse — every year a new chapter, every client a new proof point.
+                From a single office in Cairo to a global outsourcing powerhouse, every year a new chapter, every client a new proof point.
               </p>
               <div className="mt-8 h-px w-16 bg-gold-500/50" />
             </motion.div>

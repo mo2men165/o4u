@@ -69,7 +69,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             transition={{ duration: 0.7, delay: 0.22 }}
             className="mt-5 font-body text-lg text-ink/60 dark:text-white/60 max-w-xl mx-auto leading-relaxed"
           >
-            Industry insights, career stories, and outsourcing intelligence — written by people who live it every day.
+            Industry insights, career stories, and outsourcing intelligence, written by people who live it every day.
           </motion.p>
         </Container>
       </section>

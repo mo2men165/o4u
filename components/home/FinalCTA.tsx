@@ -39,7 +39,7 @@ export default function FinalCTA() {
           </h2>
           <p className="font-body text-ink/60 dark:text-white/60 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
             Tell us what you need. We'll have a custom team plan and a proposal
-            in your inbox within 24 hours — no commitment required.
+            in your inbox within 24 hours, no commitment required.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

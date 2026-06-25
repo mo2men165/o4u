@@ -22,7 +22,7 @@ export async function generateMetadata({
   const job = await getJobById(jobId);
   if (!job) return {};
   return {
-    title: `Apply — ${job.title} | O4U`,
+    title: `Apply for ${job.title} | O4U`,
     description: job.shortDescription,
   };
 }

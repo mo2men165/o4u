@@ -13,19 +13,19 @@ const STEPS = [
   },
   {
     title: "Senior Agent",
-    subtitle: "6–12 months",
+    subtitle: "6 to 12 months",
     icon: UserCheck,
     description: "Mentor new joiners, handle escalations, earn performance bonuses.",
   },
   {
     title: "Team Lead",
-    subtitle: "1–2 years",
+    subtitle: "1 to 2 years",
     icon: Users,
-    description: "Lead a squad of 8–12 agents, own KPI delivery and coaching.",
+    description: "Lead a squad of 8 to 12 agents, own KPI delivery and coaching.",
   },
   {
     title: "Operations Manager",
-    subtitle: "2–4 years",
+    subtitle: "2 to 4 years",
     icon: Briefcase,
     description: "Run full client accounts, manage multiple teams and SLAs.",
   },

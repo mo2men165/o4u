@@ -62,7 +62,7 @@ export default function Leadership() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-ink/50 dark:text-white/50 text-base mt-4 max-w-xl mx-auto leading-relaxed"
           >
-            Industry veterans who have built, scaled, and delivered BPO operations at global level. They do not just lead — they are in the room every day.
+            Industry veterans who have built, scaled, and delivered BPO operations at global level. They do not just lead, they are in the room every day.
           </motion.p>
         </div>
 

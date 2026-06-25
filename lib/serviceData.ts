@@ -40,7 +40,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Customer Service",
     tagline: "Turn every interaction into loyalty.",
     heroDescription:
-      "Multilingual, omnichannel teams that become a seamless extension of your brand — handling every customer inquiry with empathy, expertise, and measurable efficiency.",
+      "Multilingual, omnichannel teams that become a seamless extension of your brand, handling every customer inquiry with empathy, expertise, and measurable efficiency.",
     heroImage:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80",
     icon: "Headphones",
@@ -53,11 +53,11 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "Customer service that turns buyers into brand advocates",
-      body: "Our dedicated agents don't just answer questions — they represent your brand, resolve issues on the first contact, and leave customers feeling genuinely valued. From inbound inquiries to proactive retention outreach, we build the customer experience that earns five-star reviews and repeat business.",
+      body: "Our dedicated agents don't just answer questions, they represent your brand, resolve issues on the first contact, and leave customers feeling genuinely valued. From inbound inquiries to proactive retention outreach, we build the customer experience that earns five star reviews and repeat business.",
       highlights: [
         "Phone, Email, Live Chat & Social",
         "Dedicated Brand-Trained Agents",
-        "Real-Time KPI Dashboards",
+        "Real Time KPI Dashboards",
         "Seamless CRM Integration",
       ],
     },
@@ -80,14 +80,14 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "03",
         title: "Training & Certification",
         description:
-          "Rigorous product training, scenario simulations, and quality benchmarks ensure every agent is day-one ready.",
+          "Rigorous product training, scenario simulations, and quality benchmarks ensure every agent is day one ready.",
         icon: "GraduationCap",
       },
       {
         step: "04",
-        title: "Go-Live & Optimise",
+        title: "Go Live & Optimise",
         description:
-          "We launch with real-time monitoring, weekly QA reviews, and continuous coaching to compound performance.",
+          "We launch with real time monitoring, weekly QA reviews, and continuous coaching to compound performance.",
         icon: "TrendingUp",
       },
     ],
@@ -96,13 +96,13 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Globe",
         title: "12+ Languages",
         description:
-          "Native-level fluency in English, Arabic, French, German, Spanish, and more — tailored to your target markets.",
+          "Native-level fluency in English, Arabic, French, German, Spanish, and more, tailored to your target markets.",
       },
       {
         icon: "MessageSquare",
         title: "True Omnichannel",
         description:
-          "Phone, email, live chat, WhatsApp, and social media — unified under one experienced, brand-trained team.",
+          "Phone, email, live chat, WhatsApp, and social media, unified under one experienced, brand trained team.",
       },
       {
         icon: "ShieldCheck",
@@ -114,13 +114,13 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "BarChart2",
         title: "Live Dashboards",
         description:
-          "Real-time CSAT, FCR, AHT, and escalation metrics at your fingertips through custom reporting portals.",
+          "Real time CSAT, FCR, AHT, and escalation metrics at your fingertips through custom reporting portals.",
       },
       {
         icon: "Zap",
         title: "14-Day Launch",
         description:
-          "From signed contract to fully trained, operational team in as little as two weeks — no ramp-up delays.",
+          "From signed contract to fully trained, operational team in as little as two weeks, no ramp-up delays.",
       },
       {
         icon: "Heart",
@@ -136,7 +136,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Lead Generation",
     tagline: "A pipeline that never runs dry.",
     heroDescription:
-      "Outreach specialists who identify, engage, and qualify high-value prospects — delivering a consistent stream of sales-ready leads directly into your CRM.",
+      "Outreach specialists who identify, engage, and qualify high-value prospects, delivering a consistent stream of sales ready leads directly into your CRM.",
     heroImage:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
     icon: "Target",
@@ -149,7 +149,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "A dedicated sales development engine working for you 24/7",
-      body: "We build and operate your entire outbound prospecting function — from ideal customer profiling and data sourcing to multi-touch outreach and qualification. Our SDRs don't spray and pray; they use data, personalisation, and proven sequences to generate leads that actually convert.",
+      body: "We build and operate your entire outbound prospecting function, from ideal customer profiling and data sourcing to multi touch outreach and qualification. Our SDRs don't spray and pray; they use data, personalisation, and proven sequences to generate leads that actually convert.",
       highlights: [
         "ICP Definition & Data Sourcing",
         "Multi-Channel Outreach",
@@ -190,9 +190,9 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     features: [
       {
         icon: "Users",
-        title: "ICP-Built Targeting",
+        title: "ICP Built Targeting",
         description:
-          "Every prospect list built around your specific ideal customer profile — industry, size, title, and buying signals.",
+          "Every prospect list built around your specific ideal customer profile, industry, size, title, and buying signals.",
       },
       {
         icon: "Phone",
@@ -216,11 +216,11 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "RefreshCw",
         title: "Continuous Optimisation",
         description:
-          "Weekly reviews to refine targeting, messaging, and sequencing based on what's converting — and what's not.",
+          "Weekly reviews to refine targeting, messaging, and sequencing based on what's converting, and what's not.",
       },
       {
         icon: "ShieldCheck",
-        title: "Compliance-First",
+        title: "Compliance First",
         description:
           "GDPR and CAN-SPAM compliant outreach with full opt-out management to protect your sender reputation.",
       },
@@ -232,7 +232,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Telesales & Upselling",
     tagline: "Revenue growth from every conversation.",
     heroDescription:
-      "Elite sales agents who close deals, expand existing accounts, and turn your customer base into your biggest growth engine — with measurable, performance-driven results.",
+      "Elite sales agents who close deals, expand existing accounts, and turn your customer base into your biggest growth engine, with measurable, performance driven results.",
     heroImage:
       "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=80",
     icon: "TrendingUp",
@@ -245,12 +245,12 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "A high-performance sales floor, fully managed for you",
-      body: "Our telesales teams combine deep product knowledge with refined persuasion skills — not pushy tactics, but consultative selling that finds the right fit between your offerings and your customer's needs. Whether you're converting leads, retaining churning customers, or expanding existing accounts, our agents deliver revenue with integrity.",
+      body: "Our telesales teams combine deep product knowledge with refined persuasion skills, not pushy tactics, but consultative selling that finds the right fit between your offerings and your customer's needs. Whether you're converting leads, retaining churning customers, or expanding existing accounts, our agents deliver revenue with integrity.",
       highlights: [
         "Outbound & Inbound Sales",
         "BANT Qualification Framework",
-        "Upsell & Cross-Sell Programmes",
-        "Real-Time Sales Coaching",
+        "Upsell & Cross Sell Programmes",
+        "Real Time Sales Coaching",
       ],
     },
     process: [
@@ -272,7 +272,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "03",
         title: "Launch & Coach",
         description:
-          "Live campaign launch with daily call reviews, live coaching sessions, and real-time performance leaderboards.",
+          "Live campaign launch with daily call reviews, live coaching sessions, and real time performance leaderboards.",
         icon: "Mic",
       },
       {
@@ -294,7 +294,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Mic",
         title: "Live Coaching",
         description:
-          "On-floor supervisors provide real-time coaching and call monitoring to keep conversion rates consistently high.",
+          "On-floor supervisors provide real time coaching and call monitoring to keep conversion rates consistently high.",
       },
       {
         icon: "BarChart2",
@@ -306,13 +306,13 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "RefreshCw",
         title: "Upsell Sequences",
         description:
-          "Systematic cross-sell and upsell sequences triggered by customer behaviour, purchase history, and lifecycle stage.",
+          "Systematic cross sell and upsell sequences triggered by customer behaviour, purchase history, and lifecycle stage.",
       },
       {
         icon: "Shield",
         title: "Customer Retention",
         description:
-          "Specialised win-back and save-desk programmes that recover churning customers and reduce cancellation rates.",
+          "Specialised win back and save-desk programmes that recover churning customers and reduce cancellation rates.",
       },
       {
         icon: "Users",
@@ -328,11 +328,11 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Data Entry",
     tagline: "Precision processing at enterprise scale.",
     heroDescription:
-      "Highly accurate, secure, and fast data processing that frees your team from repetitive tasks — delivered with the quality controls and throughput your operations demand.",
+      "Highly accurate, secure, and fast data processing that frees your team from repetitive tasks, delivered with the quality controls and throughput your operations demand.",
     heroImage:
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80",
     icon: "Database",
-    badge: "High-Volume Processing",
+    badge: "High Volume Processing",
     stats: [
       { value: "99.9%", label: "Accuracy Rate" },
       { value: "5×", label: "Faster Than In-House" },
@@ -344,7 +344,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       body: "From one-time migration projects to ongoing high-volume processing, our data entry specialists deliver exceptional accuracy at scale. We handle structured and unstructured data across multiple formats, with dual-verification and QA processes that virtually eliminate errors before delivery.",
       highlights: [
         "Structured & Unstructured Formats",
-        "Multi-Level QA Verification",
+        "Multi Level QA Verification",
         "Secure Data Transfer Protocols",
         "Custom Workflow Integration",
       ],
@@ -368,7 +368,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "03",
         title: "Processing",
         description:
-          "Dedicated specialists process your data in secure, monitored environments with real-time progress tracking.",
+          "Dedicated specialists process your data in secure, monitored environments with real time progress tracking.",
         icon: "Database",
       },
       {
@@ -384,7 +384,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "FileText",
         title: "Multi-Format Support",
         description:
-          "Excel, CSV, PDF, images, handwritten forms, XML, JSON — we process any format your operation requires.",
+          "Excel, CSV, PDF, images, handwritten forms, XML, and JSON. We process any format your operation requires.",
       },
       {
         icon: "Eye",
@@ -414,7 +414,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Cloud",
         title: "Cloud Delivery",
         description:
-          "Secure cloud-based delivery to your storage or systems of record — no email attachments, no data exposure.",
+          "Secure cloud based delivery to your storage or systems of record, no email attachments, no data exposure.",
       },
     ],
   },
@@ -424,7 +424,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Market Research Surveys",
     tagline: "Insights that move the needle.",
     heroDescription:
-      "Professionally conducted surveys that capture real customer sentiment, market trends, and competitive intelligence — transforming raw responses into actionable strategic decisions.",
+      "Professionally conducted surveys that capture real customer sentiment, market trends, and competitive intelligence, transforming raw responses into actionable strategic decisions.",
     heroImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80",
     icon: "BarChart3",
@@ -437,7 +437,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "The voice of your market, decoded and delivered",
-      body: "We design, execute, and analyse market research surveys that give you an unfiltered view of your customers, competitors, and market opportunities. Our experienced survey specialists ensure high response rates, minimal bias, and insights you can act on — not just read about.",
+      body: "We design, execute, and analyse market research surveys that give you an unfiltered view of your customers, competitors, and market opportunities. Our experienced survey specialists ensure high response rates, minimal bias, and insights you can act on, not just read about.",
       highlights: [
         "Custom Survey Design & Scripting",
         "CATI, CAWI & CAPI Methodologies",
@@ -457,7 +457,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "02",
         title: "Sample Sourcing",
         description:
-          "We recruit the right respondents — from consumer panels to B2B decision-makers — for representative results.",
+          "We recruit the right respondents, from consumer panels to B2B decision-makers, for representative results.",
         icon: "Users",
       },
       {
@@ -492,7 +492,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Monitor",
         title: "CATI / CAWI / CAPI",
         description:
-          "Full methodology flexibility — computer-assisted telephone, web, or in-person interviewing based on your needs.",
+          "Full methodology flexibility, computer-assisted telephone, web, or in-person interviewing based on your needs.",
       },
       {
         icon: "TrendingUp",
@@ -524,7 +524,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     heroImage:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=80",
     icon: "MessageSquare",
-    badge: "Digital-First Support",
+    badge: "Digital First Support",
     stats: [
       { value: "<60s", label: "Chat Response" },
       { value: "96%", label: "First-Contact Resolution" },
@@ -533,7 +533,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "Written support that feels as personal as a phone call",
-      body: "Customers today expect fast, helpful responses across every digital channel — and they expect it to sound like your brand. Our email and chat specialists are trained not just on your products, but on your tone, values, and communication style, delivering consistently excellent support that builds trust and loyalty.",
+      body: "Customers today expect fast, helpful responses across every digital channel, and they expect it to sound like your brand. Our email and chat specialists are trained not just on your products, but on your tone, values, and communication style, delivering consistently excellent support that builds trust and loyalty.",
       highlights: [
         "Live Chat & Async Email",
         "Social Media DM Support",
@@ -546,7 +546,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "01",
         title: "Channel Setup",
         description:
-          "We integrate with your chat platform, helpdesk, and email system — Zendesk, Freshdesk, Intercom, and more.",
+          "We integrate with your chat platform, helpdesk, and email system: Zendesk, Freshdesk, Intercom, and more.",
         icon: "Settings",
       },
       {
@@ -560,7 +560,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "03",
         title: "Team Deployment",
         description:
-          "Trained agents go live with real-time supervision, CSAT tracking, and response time monitoring from day one.",
+          "Trained agents go live with real time supervision, CSAT tracking, and response time monitoring from day one.",
         icon: "Users",
       },
       {
@@ -576,7 +576,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "MessageCircle",
         title: "Live Chat Mastery",
         description:
-          "Sub-60-second first response on live chat with proactive conversation management to resolve issues fast.",
+          "Under 60 second first response on live chat with proactive conversation management to resolve issues fast.",
       },
       {
         icon: "Mail",
@@ -600,7 +600,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Heart",
         title: "Tone Calibration",
         description:
-          "Brand voice workshops ensure every message sounds authentically like you — not a generic support centre.",
+          "Brand voice workshops ensure every message sounds authentically like you, not a generic support centre.",
       },
       {
         icon: "ArrowUpRight",
@@ -614,9 +614,9 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
   "recruitment-support": {
     id: "recruitment-support",
     title: "Recruitment Process Support",
-    tagline: "Right people, faster — every time.",
+    tagline: "Right people, faster. Every time.",
     heroDescription:
-      "End-to-end recruitment support that reduces time-to-hire, improves candidate quality, and frees your HR team to focus on strategy rather than administrative heavy lifting.",
+      "Full recruitment support that reduces time to hire, improves candidate quality, and frees your HR team to focus on strategy rather than administrative heavy lifting.",
     heroImage:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80",
     icon: "Users",
@@ -629,7 +629,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "A dedicated recruitment engine that scales with your hiring volume",
-      body: "Recruitment administration is time-consuming, repetitive, and resource-intensive — exactly the type of work our specialists excel at. From sourcing and initial screening to interview coordination and offer management, we handle the full operational layer of your hiring process so your HR team can focus on culture, strategy, and decision-making.",
+      body: "Recruitment administration is time-consuming, repetitive, and resource-intensive, exactly the type of work our specialists excel at. From sourcing and initial screening to interview coordination and offer management, we handle the full operational layer of your hiring process so your HR team can focus on culture, strategy, and decision-making.",
       highlights: [
         "Resume Screening & Shortlisting",
         "Interview Scheduling & Coordination",
@@ -649,21 +649,21 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "02",
         title: "Source & Screen",
         description:
-          "Multi-platform sourcing followed by systematic resume screening against your criteria — only qualified shortlists delivered.",
+          "Multi platform sourcing followed by systematic resume screening against your criteria, only qualified shortlists delivered.",
         icon: "Search",
       },
       {
         step: "03",
         title: "Coordinate Interviews",
         description:
-          "Full interview scheduling — calendar management, candidate prep briefings, reminders, and rescheduling handled.",
+          "Full interview scheduling, calendar management, candidate prep briefings, reminders, and rescheduling handled.",
         icon: "Calendar",
       },
       {
         step: "04",
         title: "Offer & Onboard",
         description:
-          "Reference checking, offer letter coordination, pre-boarding paperwork, and first-day logistics seamlessly managed.",
+          "Reference checking, offer letter coordination, pre-boarding paperwork, and first day logistics seamlessly managed.",
         icon: "CheckCircle",
       },
     ],
@@ -672,7 +672,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Search",
         title: "Multi-Platform Sourcing",
         description:
-          "LinkedIn, Indeed, Glassdoor, Bayt, and niche job boards — comprehensive sourcing across your target talent pools.",
+          "LinkedIn, Indeed, Glassdoor, Bayt, and niche job boards. Comprehensive sourcing across your target talent pools.",
       },
       {
         icon: "FileText",
@@ -684,7 +684,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Calendar",
         title: "Interview Logistics",
         description:
-          "End-to-end scheduling coordination — calendar sync, video links, confirmations, reminders, and post-interview notes.",
+          "Full scheduling coordination, calendar sync, video links, confirmations, reminders, and post-interview notes.",
       },
       {
         icon: "Monitor",
@@ -702,7 +702,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "ClipboardList",
         title: "Onboarding Coordination",
         description:
-          "Pre-boarding document collection, background check facilitation, and first-day setup coordination handled end-to-end.",
+          "Pre boarding document collection, background check facilitation, and first day setup coordination handled full.",
       },
     ],
   },
@@ -712,7 +712,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Appointment Setting",
     tagline: "Your calendar, consistently full.",
     heroDescription:
-      "Specialists who identify, qualify, and schedule high-value appointments with decision-makers — so your sales team shows up to meetings that are ready to convert.",
+      "Specialists who identify, qualify, and schedule high-value appointments with decision-makers, so your sales team shows up to meetings that are ready to convert.",
     heroImage:
       "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1920&q=80",
     icon: "Calendar",
@@ -725,12 +725,12 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     ],
     overview: {
       headline: "Pre-qualified meetings that actually convert",
-      body: "We don't just book time slots — we deliver motivated, qualified prospects who understand your value proposition and have agreed to a meaningful conversation. Our appointment setters research each prospect, tailor the outreach, and invest in the relationship before the meeting is ever booked.",
+      body: "We don't just book time slots, we deliver motivated, qualified prospects who understand your value proposition and have agreed to a meaningful conversation. Our appointment setters research each prospect, tailor the outreach, and invest in the relationship before the meeting is ever booked.",
       highlights: [
         "B2B & B2C Setting",
-        "Multi-Touch Outreach Sequences",
+        "Multi Touch Outreach Sequences",
         "Calendar Integration & Sync",
-        "No-Show Prevention Protocols",
+        "No Show Prevention Protocols",
       ],
     },
     process: [
@@ -738,7 +738,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "01",
         title: "ICP Profiling",
         description:
-          "We define your ideal prospect profile in detail — company size, role, industry, pain points, and buying signals.",
+          "We define your ideal prospect profile in detail, company size, role, industry, pain points, and buying signals.",
         icon: "Target",
       },
       {
@@ -750,7 +750,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       },
       {
         step: "03",
-        title: "Multi-Touch Outreach",
+        title: "Multi Touch Outreach",
         description:
           "Personalised phone and email sequences build familiarity and trust before the meeting request is ever made.",
         icon: "Phone",
@@ -759,7 +759,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "04",
         title: "Schedule & Confirm",
         description:
-          "Appointments booked into your sales team's calendar with confirmations, reminders, and no-show follow-ups.",
+          "Appointments booked into your sales team's calendar with confirmations, reminders, and no show follow-ups.",
         icon: "Calendar",
       },
     ],
@@ -774,17 +774,17 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "Calendar",
         title: "Calendar Integration",
         description:
-          "Direct booking into Google Calendar, Outlook, Calendly, or your CRM — zero back-and-forth friction.",
+          "Direct booking into Google Calendar, Outlook, Calendly, or your CRM, zero back-and-forth friction.",
       },
       {
         icon: "Phone",
-        title: "Multi-Touch Sequences",
+        title: "Multi Touch Sequences",
         description:
           "Phone calls, voicemails, and email follow-ups in a coordinated sequence that converts resistant prospects.",
       },
       {
         icon: "Bell",
-        title: "No-Show Prevention",
+        title: "No Show Prevention",
         description:
           "24-hour reminders, day-of confirmations, and rapid reschedule protocols keep your show rate above 85%.",
       },
@@ -808,7 +808,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
     title: "Back Office Support",
     tagline: "Operations so smooth you forget we're there.",
     heroDescription:
-      "Comprehensive back-office outsourcing that handles the essential administrative work keeping your business running — so your team can focus entirely on growth.",
+      "Comprehensive back office outsourcing that handles the essential administrative work keeping your business running, so your team can focus entirely on growth.",
     heroImage:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
     icon: "Briefcase",
@@ -820,8 +820,8 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
       { value: "24/7", label: "Availability" },
     ],
     overview: {
-      headline: "Essential operations handled — so you can focus on what matters",
-      body: "Back-office functions are critical to your business but don't need to consume your most talented people's time. Our operations specialists take on document processing, reporting, invoicing, and administrative coordination with the accuracy, speed, and reliability your business demands — at a fraction of the in-house cost.",
+      headline: "Essential operations handled, so you can focus on what matters",
+      body: "Back-office functions are critical to your business but don't need to consume your most talented people's time. Our operations specialists take on document processing, reporting, invoicing, and administrative coordination with the accuracy, speed, and reliability your business demands, at a fraction of the in house cost.",
       highlights: [
         "Document & Invoice Processing",
         "Reporting & Analytics",
@@ -834,7 +834,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         step: "01",
         title: "Process Audit",
         description:
-          "We map your current back-office workflows, identify inefficiencies, and design optimised processes before we start.",
+          "We map your current back office workflows, identify inefficiencies, and design optimised processes before we start.",
         icon: "Search",
       },
       {
@@ -864,7 +864,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "FileText",
         title: "Document Processing",
         description:
-          "High-volume document intake, classification, data extraction, and filing across all your business document types.",
+          "High volume document intake, classification, data extraction, and filing across all your business document types.",
       },
       {
         icon: "DollarSign",
@@ -882,7 +882,7 @@ export const SERVICE_PAGE_DATA: Record<string, ServicePageData> = {
         icon: "RefreshCw",
         title: "Data Reconciliation",
         description:
-          "Cross-system data reconciliation and validation to catch discrepancies before they become costly errors.",
+          "Cross system data reconciliation and validation to catch discrepancies before they become costly errors.",
       },
       {
         icon: "Cpu",

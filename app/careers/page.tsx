@@ -16,7 +16,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join O4U — explore career opportunities, growth paths, and open positions at Egypt's leading outsourcing company.",
+    "Join O4U and explore career opportunities, growth paths, and open positions at Egypt's leading outsourcing company.",
   openGraph: {
     title: "Careers | O4U",
     description:

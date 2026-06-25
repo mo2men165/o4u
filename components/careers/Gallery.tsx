@@ -54,7 +54,7 @@ export default function Gallery() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-ink/50 dark:text-white/50 text-base mt-4 max-w-xl mx-auto"
           >
-            From daily operations to yearly celebrations — here is a glimpse into what it actually feels like to work here.
+            From daily operations to yearly celebrations, here is a glimpse into what it actually feels like to work here.
           </motion.p>
         </div>
 

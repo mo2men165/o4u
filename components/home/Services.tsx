@@ -18,11 +18,11 @@ const iconMap: Record<string, LucideIcon> = {
 
 // Bento sizing: some cards span 2 cols on large screens
 const bentoLayout = [
-  "lg:col-span-2", // Customer Service — wide
+  "lg:col-span-2", // Customer Service, wide
   "lg:col-span-1",
   "lg:col-span-1",
   "lg:col-span-1",
-  "lg:col-span-2", // Market Research — wide
+  "lg:col-span-2", // Market Research, wide
   "lg:col-span-1",
   "lg:col-span-1",
   "lg:col-span-1",

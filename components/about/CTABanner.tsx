@@ -8,7 +8,7 @@ import { Container } from "@/components/ui";
 export default function CTABanner() {
   return (
     <section className="relative bg-gradient-to-br from-primary-100 via-primary-50 to-white dark:bg-ink overflow-hidden py-28">
-      {/* Background mesh — dark mode only */}
+      {/* Background mesh, dark mode only */}
       <div className="absolute inset-0 bg-mesh-primary opacity-90 hidden dark:block" />
       <div className="absolute inset-0 bg-grid-pattern [background-size:48px_48px] opacity-[0.06]" />
 

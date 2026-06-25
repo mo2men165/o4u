@@ -10,7 +10,7 @@ const values = [
     number: "01",
     title: "Integrity First",
     description:
-      "Every promise we make, we keep. Transparent reporting, honest communication, and zero tolerance for shortcuts — even when no one is watching.",
+      "Every promise we make, we keep. Transparent reporting, honest communication, and zero tolerance for shortcuts, even when no one is watching.",
     accent: "from-primary-700/40 to-primary-900/80",
     highlight: "border-primary-400/20",
   },
@@ -19,7 +19,7 @@ const values = [
     number: "02",
     title: "Excellence Always",
     description:
-      "We don't aim for average. Daily QA audits, continuous coaching, and relentless performance improvement are the standard — not the exception.",
+      "We don't aim for average. Daily QA audits, continuous coaching, and relentless performance improvement are the standard, not the exception.",
     accent: "from-gold-500/20 to-primary-900/80",
     highlight: "border-gold-500/20",
   },
@@ -28,7 +28,7 @@ const values = [
     number: "03",
     title: "People at the Centre",
     description:
-      "Our agents are not resources — they are our greatest asset. We invest in their growth, wellbeing, and career progression because it directly drives client outcomes.",
+      "Our agents are not resources, they are our greatest asset. We invest in their growth, wellbeing, and career progression because it directly drives client outcomes.",
     accent: "from-primary-600/30 to-primary-900/80",
     highlight: "border-primary-300/20",
   },

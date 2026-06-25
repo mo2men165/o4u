@@ -121,19 +121,19 @@ export default function Hero() {
         >
           <p>
             O4U is Egypt&apos;s premier BPO partner. We are a team of 250+ multilingual
-            professionals delivering customer service, sales, and back-office
+            professionals delivering customer service, sales, and back office
             operations to businesses across the UK, Europe, the US, and the Middle
             East. We don&apos;t fill seats. We build dedicated teams that integrate
             into your culture, hit your KPIs, and scale with your growth.
           </p>
           <p>
-            What sets us apart is how we combine world-class talent with
-            operational rigour: native-level English training tailored to UK
-            markets, live operations in as little as two weeks, real-time QA
+            What sets us apart is how we combine excellent talent with
+            operational rigour: native level English training tailored to UK
+            markets, live operations in as little as two weeks, real time QA
             dashboards, and a 98% client retention rate that speaks for itself.
             From our Maadi headquarters, we give global brands access to
             exceptional Egyptian talent without the overhead of building it
-            in-house.
+            in house.
           </p>
         </motion.div>
 

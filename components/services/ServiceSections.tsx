@@ -33,21 +33,21 @@ const extendedDescriptions: Record<string, string> = {
   "customer-support":
     "Multilingual inbound and outbound agents trained to represent your brand with empathy and precision. 24/7 coverage across calls, live chat, email, and social media.",
   "sales-outsourcing":
-    "A dedicated sales force that integrates seamlessly with your team — from cold outreach and lead qualification to closing deals in B2B and B2C markets.",
+    "A dedicated sales force that integrates seamlessly with your team, from cold outreach and lead qualification to closing deals in B2B and B2C markets.",
   "back-office":
     "Free your internal teams from repetitive tasks. Our specialists handle data entry, document processing, invoicing, and records management at speed and scale.",
   "revenue-growth":
-    "Maximise every customer interaction with strategic upselling and cross-selling programmes that increase average order value and lifetime customer worth.",
+    "Maximise every customer interaction with strategic upselling and cross selling programmes that increase average order value and lifetime customer worth.",
   "analytics-reporting":
-    "Real-time dashboards, custom KPI tracking, and actionable insights so you can make confident, data-driven decisions and continuously optimise performance.",
+    "Real time dashboards, custom KPI tracking, and actionable insights so you can make confident, data backed decisions and continuously optimise performance.",
   "chat-email-support":
     "Fast, professional written support across every digital channel. Consistent brand tone, rapid turnaround, and high CSAT scores across live chat and email.",
   "hr-solutions":
-    "End-to-end HR solutions — talent sourcing, recruitment, onboarding, payroll, and performance management for your outsourced workforce.",
+    "Full HR solutions, talent sourcing, recruitment, onboarding, payroll, and performance management for your outsourced workforce.",
   "appointment-setting":
     "Keep your pipeline full with qualified appointments set by professional agents who handle prospect outreach, qualification, scheduling, and follow-ups.",
   "virtual-assistants":
-    "Skilled virtual assistants who work as a seamless extension of your team — executive support, calendar management, research, and travel booking.",
+    "Skilled virtual assistants who work as a seamless extension of your team, executive support, calendar management, research, and travel booking.",
 };
 
 const accentColors = [
@@ -96,7 +96,7 @@ export default function ServiceSections() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-body text-ink/50 dark:text-white/50 text-base mt-4 max-w-xl mx-auto leading-relaxed"
           >
-            From day-one customer support to advanced analytics — every service is delivered by trained, dedicated teams who live and breathe your brand.
+            From day one customer support to advanced analytics, every service is delivered by trained, dedicated teams who live and breathe your brand.
           </motion.p>
         </div>
 

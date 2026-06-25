@@ -8,7 +8,7 @@ import type { ServicePageData } from "@/lib/serviceData";
 
 const TRUST_BADGES = [
   "2-Week Launch",
-  "No Long-Term Lock-In",
+  "No Long Term Lock-In",
   "Dedicated Account Manager",
   "Free Consultation",
 ];
@@ -61,7 +61,7 @@ export default function ServiceCTA({ data }: { data: ServicePageData }) {
           transition={{ duration: 0.7, delay: 0.18 }}
           className="font-body text-ink/60 dark:text-white/55 text-lg mt-5 mb-4 max-w-xl mx-auto leading-relaxed"
         >
-          {data.tagline} — Let's build your dedicated team and prove it in 14 days.
+          {data.tagline} Let&apos;s build your dedicated team and prove it in 14 days.
         </motion.p>
 
         {/* Trust badges */}

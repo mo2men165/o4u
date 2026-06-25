@@ -83,7 +83,7 @@ export default function ServiceMetrics({ data }: { data: ServicePageData }) {
           className="text-center"
         >
           <p className="font-body text-white/40 text-base mb-6">
-            These numbers are built on real client results — not projections.
+            These numbers are built on real client results, not projections.
           </p>
           <Link
             href="/contact"

@@ -116,7 +116,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.75 }}
           className="mt-6 font-body text-lg md:text-xl text-ink/60 dark:text-white/60 leading-relaxed max-w-2xl"
         >
-          From customer support to back-office operations — we deliver dedicated,
+          From customer support to back office operations, we deliver dedicated,
           multilingual teams that become a seamless extension of your business.
         </motion.p>
 

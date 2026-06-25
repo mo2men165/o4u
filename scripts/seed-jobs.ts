@@ -31,13 +31,13 @@ const db = getFirestore();
 const JOB_POSTINGS = [
   {
     id: 'cs-agent-en',
-    title: 'Customer Service Agent — English',
+    title: 'Customer Service Agent (English)',
     department: 'Customer Service',
     type: 'Full-time',
     description:
-      'Handle inbound customer inquiries via phone, email, and chat for our international clients. Provide exceptional support while maintaining quality standards and first-call resolution targets. Requires fluent English and strong communication skills.',
+      'Handle inbound customer inquiries via phone, email, and chat for our international clients. Provide exceptional support while maintaining quality standards and first call resolution targets. Requires fluent English and strong communication skills.',
     shortDescription:
-      'Provide world-class support for international clients via phone, email, and chat.',
+      'Provide excellent support for international clients via phone, email, and chat.',
     active: true,
     order: 1,
   },
@@ -47,7 +47,7 @@ const JOB_POSTINGS = [
     department: 'Sales',
     type: 'Full-time',
     description:
-      'Drive revenue through outbound sales campaigns, upselling, and cross-selling to existing client bases. Mentor junior team members and contribute to sales strategy development. Requires 2+ years of telesales experience.',
+      'Drive revenue through outbound sales campaigns, upselling, and cross selling to existing client bases. Mentor junior team members and contribute to sales strategy development. Requires 2+ years of telesales experience.',
     shortDescription: 'Lead outbound sales campaigns and mentor junior team members.',
     active: true,
     order: 2,

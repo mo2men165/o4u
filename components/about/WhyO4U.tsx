@@ -23,7 +23,7 @@ const differentiators = [
   {
     icon: Globe2,
     title: "Global-Ready Infrastructure",
-    body: "ISO-aligned operations, GDPR-compliant data handling, and multi-timezone coverage. We are built for global business from day one.",
+    body: "ISO compliant operations, GDPR-compliant data handling, and multi-timezone coverage. We are built for global business from day one.",
   },
   {
     icon: Zap,
@@ -33,12 +33,12 @@ const differentiators = [
   {
     icon: BarChart3,
     title: "Radical Transparency",
-    body: "Real-time KPI dashboards, daily QA scoring, and monthly performance reviews. You always know exactly what your team delivers.",
+    body: "Real time KPI dashboards, daily QA scoring, and monthly performance reviews. You always know exactly what your team delivers.",
   },
   {
     icon: Languages,
     title: "Multilingual Teams",
-    body: "English, Arabic, French, German, Spanish and more. We match your customers with agents who speak their language — literally.",
+    body: "English, Arabic, French, German, Spanish and more. We match your customers with agents who speak their language, literally.",
   },
   {
     icon: Clock,

@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/firebase-admin';
 import { FieldValue } from 'firebase-admin/firestore';
+import { sendApplicationEmails } from '@/lib/emails/application-emails';
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
   try {
@@ -23,7 +26,14 @@ export async function POST(request: Request) {
       );
     }
 
-    await db.collection('applications').add({
+    if (!EMAIL_REGEX.test(email)) {
+      return NextResponse.json(
+        { error: 'Invalid email address.' },
+        { status: 400 }
+      );
+    }
+
+    const applicationData = {
       fullName,
       email,
       phone,
@@ -33,15 +43,21 @@ export async function POST(request: Request) {
       cvUrl: cvUrl || '',
       audioFileName: audioFileName || '',
       audioUrl: audioUrl || '',
+    };
+
+    await db.collection('applications').add({
+      ...applicationData,
       submittedAt: FieldValue.serverTimestamp(),
       status: 'new',
     });
 
+    await sendApplicationEmails(applicationData);
+
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error('Failed to save application:', error);
+    console.error('Failed to process application:', error);
     return NextResponse.json(
-      { error: 'Failed to save application.' },
+      { error: 'Failed to submit application. Please try again or contact us directly.' },
       { status: 500 }
     );
   }

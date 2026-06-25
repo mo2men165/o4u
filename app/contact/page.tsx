@@ -8,10 +8,10 @@ import Container from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Contact Us | O4U",
   description:
-    "Get in touch with O4U — reach our Cairo office for business inquiries, partnership opportunities, or career questions.",
+    "Get in touch with O4U. Reach our Cairo office for business inquiries, partnership opportunities, or career questions.",
   openGraph: {
     title: "Contact Us | O4U",
-    description: "Start a conversation with Egypt's premier BPO partner. Business inquiries, partnerships, or careers — we're ready.",
+    description: "Start a conversation with Egypt's premier BPO partner. Business inquiries, partnerships, or careers welcome.",
     type: "website",
   },
 };
@@ -65,7 +65,7 @@ export default function ContactPage() {
             <span className="text-gold-400">Exceptional</span>
           </h1>
           <p className="mt-5 font-body text-lg text-ink/60 dark:text-white/60 max-w-xl mx-auto leading-relaxed">
-            Whether you want to outsource, partner, or join our team — every great relationship starts with a conversation.
+            Whether you want to outsource, partner, or join our team, every great relationship starts with a conversation.
           </p>
         </Container>
       </section>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 Business Inquiry
               </h2>
               <p className="font-body text-ink/50 dark:text-white/50 text-sm leading-relaxed mb-6">
-                Looking to outsource customer support, sales, or back-office operations? Tell us about your needs and we&apos;ll design a custom solution.
+                Looking to outsource customer support, sales, or back office operations? Tell us about your needs and we&apos;ll design a custom solution.
               </p>
               <a
                 href="#contact-form"

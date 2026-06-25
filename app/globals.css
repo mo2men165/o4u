@@ -10,3 +10,12 @@
     font-family: var(--font-heading), "Plus Jakarta Sans", sans-serif;
   }
 }
+
+/* Mobile-only perf: large blurred orbs are very GPU-heavy on phones */
+@layer utilities {
+  @media (max-width: 1023px) {
+    .rounded-full[class*="blur-"] {
+      display: none;
+    }
+  }
+}

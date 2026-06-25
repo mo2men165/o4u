@@ -5,10 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: {
     template: "%s | O4U",
-    default: "O4U — Egypt's Premier Outsourcing Partner",
+    default: "O4U | Egypt's Premier Outsourcing Partner",
   },
   description:
-    "O4U is Egypt's premier outsourcing partner, delivering exceptional customer service, sales, and back-office solutions to businesses worldwide.",
+    "O4U is Egypt's premier outsourcing partner, delivering exceptional customer service, sales, and back office solutions to businesses worldwide.",
   openGraph: {
     siteName: "O4U",
     type: "website",

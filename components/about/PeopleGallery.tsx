@@ -9,7 +9,7 @@ const culturePoints = [
   {
     icon: Heart,
     title: "Agents Who Care",
-    body: "We hire for empathy first, skills second. Every agent is trained to treat every customer like the most important call of the day — because for that customer, it is.",
+    body: "We hire for empathy first, skills second. Every agent is trained to treat every customer like the most important call of the day, because for that customer, it is.",
   },
   {
     icon: TrendingUp,

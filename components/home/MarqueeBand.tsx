@@ -8,7 +8,7 @@ export const metrics = [
   "4 Continents Served",
   "98% Client Retention",
   "24/7 Multilingual Support",
-  "2–4 Week Team Launch",
+  "2 to 4 Week Team Launch",
 ];
 
 export default function MarqueeBand() {

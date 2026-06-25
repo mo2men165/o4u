@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,6 +12,7 @@ import {
   Play,
 } from "lucide-react";
 import { Container } from "@/components/ui";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const floatingStats = [
   { value: "250+", label: "Dedicated Agents", icon: Users },
@@ -24,6 +24,7 @@ const floatingStats = [
 const headingWords = ["Scale", "Smarter", "With", "a", "Team", "Built", "Around", "You"];
 
 export default function Hero() {
+  const isMobile = useIsMobile();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const smoothX = useSpring(mouseX, { stiffness: 50, damping: 30 });
@@ -42,7 +43,7 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden bg-primary-50 dark:bg-ink"
-      onMouseMove={handleMouseMove}
+      onMouseMove={isMobile ? undefined : handleMouseMove}
     >
       {/* Background image */}
       <div className="absolute inset-0 pointer-events-none">
@@ -50,23 +51,26 @@ export default function Hero() {
           src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover opacity-[0.07]"
           priority
         />
       </div>
 
-      {/* Parallax orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          style={{ x: orb1X, y: orb1Y }}
-          className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-primary-700/30 blur-[120px]"
-        />
-        <motion.div
-          style={{ x: orb2X, y: orb2Y }}
-          className="absolute top-1/3 -right-60 w-[600px] h-[600px] rounded-full bg-primary-500/20 blur-[100px]"
-        />
-        <div className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] rounded-full bg-gold-500/10 blur-[100px] animate-pulse [animation-delay:3s]" />
-      </div>
+      {/* Parallax orbs — desktop only; mobile hides these via CSS for GPU savings */}
+      {!isMobile && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            style={{ x: orb1X, y: orb1Y }}
+            className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-primary-700/30 blur-[120px]"
+          />
+          <motion.div
+            style={{ x: orb2X, y: orb2Y }}
+            className="absolute top-1/3 -right-60 w-[600px] h-[600px] rounded-full bg-primary-500/20 blur-[100px]"
+          />
+          <div className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] rounded-full bg-gold-500/10 blur-[100px] animate-pulse [animation-delay:3s]" />
+        </div>
+      )}
 
       {/* Grid texture */}
       <div className="absolute inset-0 bg-grid-pattern [background-size:48px_48px] opacity-[0.06]" />
@@ -77,9 +81,9 @@ export default function Hero() {
           {/* Left: Copy */}
           <div>
             <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6 }}
+              initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 20, scale: 0.95 }}
+              animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+              transition={isMobile ? { duration: 0.25 } : { duration: 0.6 }}
               className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-sm px-4 py-1.5 mb-8"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-gold-500 animate-pulse" />
@@ -96,9 +100,13 @@ export default function Hero() {
               {headingWords.map((word, i) => (
                 <motion.span
                   key={i}
-                  initial={{ opacity: 0, y: 40, rotateX: -20 }}
-                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                  initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 40, rotateX: -20 }}
+                  animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0, rotateX: 0 }}
+                  transition={
+                    isMobile
+                      ? { duration: 0.2, delay: i * 0.02 }
+                      : { duration: 0.6, delay: 0.1 + i * 0.07, ease: [0.22, 1, 0.36, 1] }
+                  }
                   className={word === "Team" ? "text-gold-400" : ""}
                   style={{ display: "inline-block" }}
                 >
@@ -108,20 +116,20 @@ export default function Hero() {
             </h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
+              initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 30 }}
+              animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              transition={isMobile ? { duration: 0.25, delay: 0.15 } : { duration: 0.8, delay: 0.7 }}
               className="mt-6 text-lg font-body text-ink/60 dark:text-white/60 leading-relaxed max-w-xl"
             >
               O4U delivers dedicated, multilingual teams across
-              customer service, sales, and back-office operations — to clients
+              customer service, sales, and back office operations to clients
               across the UK, Europe, and beyond.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.85 }}
+              initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 30 }}
+              animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              transition={isMobile ? { duration: 0.25, delay: 0.2 } : { duration: 0.8, delay: 0.85 }}
               className="mt-10 flex flex-wrap gap-4"
             >
               <Link
@@ -144,10 +152,10 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
+              transition={isMobile ? { duration: 0.25, delay: 0.25 } : { duration: 0.8, delay: 1.1 }}
               className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3"
             >
-              {["Serving 4 Continents", "ISO-Aligned Security", "5+ Years Experience"].map((t) => (
+              {["Serving 4 Continents", "ISO Compliant Security", "5+ Years Experience"].map((t) => (
                 <span key={t} className="flex items-center gap-2 text-sm font-body text-ink/45 dark:text-white/45">
                   <span className="w-1 h-1 rounded-full bg-gold-500" />
                   {t}

@@ -9,27 +9,27 @@ import { Container, AnimatedCounter } from "@/components/ui";
 const pillars = [
   {
     icon: Shield,
-    title: "Enterprise-Grade Security",
+    title: "Enterprise Grade Security",
     description:
-      "GDPR-compliant, ISO-aligned operations with encrypted comms, strict access controls, and regular audits. Your data and your clients' data are safe with us.",
+      "GDPR compliant, ISO compliant operations with encrypted comms, strict access controls, and regular audits. Your data and your clients' data are safe with us.",
   },
   {
     icon: Zap,
     title: "Operational Agility",
     description:
-      "Scale your team up or down in as little as two weeks. No long-term headcount commitments, no HR overhead — just the capacity you need, when you need it.",
+      "Scale your team up or down in as little as two weeks. No long term headcount commitments, no HR overhead, just the capacity you need, when you need it.",
   },
   {
     icon: BarChart2,
     title: "Accountable Performance",
     description:
-      "Real-time KPI dashboards, daily QA audits, and transparent SLA reporting. You own the metrics and we deliver them — no guesswork, no excuses.",
+      "Real time KPI dashboards, daily QA audits, and transparent SLA reporting. You own the metrics and we deliver them, no guesswork, no excuses.",
   },
   {
     icon: MessageCircle,
     title: "Multilingual Talent",
     description:
-      "English, Arabic, French, German, Spanish — our diverse workforce serves global customers in their native language, driving higher CSAT and first-call resolution.",
+      "English, Arabic, French, German, and Spanish. Our diverse workforce serves global customers in their native language, driving higher CSAT and first call resolution.",
   },
 ];
 
@@ -82,7 +82,7 @@ export default function WhyUs() {
               Why Choose O4U
             </span>
             <h2 className="font-heading font-bold text-ink dark:text-white tracking-tight leading-tight mb-6" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
-              Not just an outsourcing vendor —{" "}
+              Not just an outsourcing vendor.{" "}
               <span className="text-primary-500 dark:text-primary-300">a growth partner</span>
             </h2>
             <p className="font-body text-ink/55 dark:text-white/55 leading-relaxed mb-8 text-lg">

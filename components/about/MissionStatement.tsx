@@ -49,9 +49,9 @@ export default function MissionStatement() {
           <p className="mt-10 font-body text-white/75 text-base md:text-lg leading-relaxed">
             We invest heavily in our people with structured training programmes,
             proprietary QA monitoring, and career paths that keep turnover low and
-            performance high. That&apos;s why clients stay: ISO-aligned operations,
+            performance high. That&apos;s why clients stay: ISO compliant operations,
             GDPR-compliant data handling, 24/7 multilingual coverage, and radical
-            transparency through real-time dashboards and daily performance
+            transparency through real time dashboards and daily performance
             scoring. When you partner with O4U, you get more than an offshore
             vendor. You get an extension of your team, built to perform from day
             one.

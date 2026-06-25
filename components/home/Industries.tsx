@@ -15,7 +15,7 @@ const industries = [
     icon: Building2,
     headline: "Convert More Leads, Close More Deals",
     description:
-      "We handle the heavy lifting — lead qualification, appointment setting, and tenant follow-ups — so your agents stay focused on closing. Our teams are trained on real estate workflows and CRM systems.",
+      "We handle the heavy lifting, lead qualification, appointment setting, and tenant follow-ups, so your agents stay focused on closing. Our teams are trained on real estate workflows and CRM systems.",
     bullets: ["Lead qualification & nurturing", "Appointment scheduling", "Tenant & buyer follow-ups", "CRM data management"],
     stat: { value: "3×", label: "faster lead response time" },
   },
@@ -27,7 +27,7 @@ const industries = [
     description:
       "From patient intake to insurance verification, our HIPAA-aware agents deliver compassionate, compliant interactions that keep your patients satisfied and your staff unburdened.",
     bullets: ["Patient scheduling & reminders", "Insurance verification", "Prescription refill support", "Empathetic multilingual agents"],
-    stat: { value: "40%", label: "reduction in no-show rates" },
+    stat: { value: "40%", label: "reduction in no show rates" },
   },
   {
     id: "ecommerce",
@@ -35,7 +35,7 @@ const industries = [
     icon: ShoppingCart,
     headline: "Delight Customers at Every Touchpoint",
     description:
-      "Order inquiries, returns, and live chat — handled instantly. Our e-commerce specialists integrate with your platforms to resolve issues fast and keep your reviews stellar.",
+      "Order inquiries, returns, and live chat, handled instantly. Our e-commerce specialists integrate with your platforms to resolve issues fast and keep your reviews stellar.",
     bullets: ["Order tracking & updates", "Returns & refunds processing", "Live chat & email support", "Platform integrations (Shopify, Magento)"],
     stat: { value: "92%", label: "first-contact resolution rate" },
   },
@@ -53,10 +53,10 @@ const industries = [
     id: "technology",
     label: "Technology",
     icon: Cpu,
-    headline: "Tier-1 Support That Actually Resolves Issues",
+    headline: "Tier 1 Support That Actually Resolves Issues",
     description:
       "Reduce engineering ticket burden with our tech-savvy agents trained on your product. From SaaS onboarding to troubleshooting, we become an extension of your team.",
-    bullets: ["Tier-1 technical helpdesk", "SaaS onboarding assistance", "Bug triage & escalation", "Knowledge base management"],
+    bullets: ["Tier 1 technical helpdesk", "SaaS onboarding assistance", "Bug triage & escalation", "Knowledge base management"],
     stat: { value: "60%", label: "ticket deflection rate" },
   },
   {
@@ -66,7 +66,7 @@ const industries = [
     headline: "Omnichannel Excellence, Every Season",
     description:
       "Scale effortlessly during peak seasons with our retail-trained agents who handle everything from loyalty inquiries to in-store escalations across all channels.",
-    bullets: ["Omnichannel customer care", "Loyalty programme support", "Seasonal scale-up (2-week ramp)", "In-store escalation handling"],
+    bullets: ["Omnichannel customer care", "Loyalty programme support", "Seasonal scale-up (2 week ramp)", "In-store escalation handling"],
     stat: { value: "4.8★", label: "average post-interaction rating" },
   },
 ];

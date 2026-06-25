@@ -105,8 +105,8 @@ export default function ServiceFeatures({ data }: { data: ServicePageData }) {
             transition={{ duration: 0.6, delay: 0.16 }}
             className="font-body text-ink/50 dark:text-white/50 mt-4 max-w-lg mx-auto leading-relaxed"
           >
-            Every capability built into your dedicated team from day one —
-            no add-ons, no hidden costs.
+            Every capability built into your dedicated team from day one.
+            No add-ons, no hidden costs.
           </motion.p>
         </div>
 
