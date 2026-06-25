@@ -316,7 +316,7 @@ export const EMPLOYEES = [
     joinYear: 2024,
     quote:
       "Quality isn't about catching people out, it's about raising the standard together. O4U understood that from day one, and it's why I was happy to step into this role.",
-    photo: "/employees/fatma_ghazali.jpg",
+    photo: "/employees/fatma_ghazali_new.jpg",
   },
   {
     name: "Maryam Mostafa",
