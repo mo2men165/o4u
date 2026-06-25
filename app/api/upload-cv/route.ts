@@ -1,13 +1,19 @@
 import { NextResponse } from 'next/server';
 import { storageBucket } from '@/lib/firebase-admin';
+import { corsHeaders, handleOptions } from '@/lib/cors';
+
+export async function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
 
 export async function POST(request: Request) {
+  const origin = request.headers.get('origin');
   try {
     const formData = await request.formData();
     const cv = formData.get('cv') as File | null;
 
     if (!cv) {
-      return NextResponse.json({ error: 'No file provided.' }, { status: 400 });
+      return NextResponse.json({ error: 'No file provided.' }, { status: 400, headers: corsHeaders(origin) });
     }
 
     const allowed = [
@@ -16,7 +22,7 @@ export async function POST(request: Request) {
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
     if (!allowed.includes(cv.type)) {
-      return NextResponse.json({ error: 'CV must be PDF, DOC, or DOCX.' }, { status: 400 });
+      return NextResponse.json({ error: 'CV must be PDF, DOC, or DOCX.' }, { status: 400, headers: corsHeaders(origin) });
     }
 
     const buffer = Buffer.from(await cv.arrayBuffer());
@@ -32,9 +38,9 @@ export async function POST(request: Request) {
       expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000),
     });
 
-    return NextResponse.json({ url });
+    return NextResponse.json({ url }, { headers: corsHeaders(origin) });
   } catch (error) {
     console.error('CV upload error:', error);
-    return NextResponse.json({ error: 'Upload failed. Please try again.' }, { status: 500 });
+    return NextResponse.json({ error: 'Upload failed. Please try again.' }, { status: 500, headers: corsHeaders(origin) });
   }
 }

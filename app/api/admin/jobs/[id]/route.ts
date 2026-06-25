@@ -42,7 +42,6 @@ export async function PUT(request: Request, context: RouteContext) {
     const job = await updateJob(id, data);
 
     revalidatePath('/careers');
-    revalidatePath(`/careers/apply/${id}`);
     revalidatePath('/admin');
 
     return NextResponse.json(job);

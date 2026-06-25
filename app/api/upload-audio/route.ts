@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
 import { storageBucket } from '@/lib/firebase-admin';
+import { corsHeaders, handleOptions } from '@/lib/cors';
+
+export async function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
 
 const ALLOWED_BASE_TYPES = new Set([
   'audio/webm',
@@ -81,12 +86,13 @@ function resolveAudioContentType(file: File, buffer: Buffer): string | null {
 }
 
 export async function POST(request: Request) {
+  const origin = request.headers.get('origin');
   try {
     const formData = await request.formData();
     const audio = formData.get('audio') as File | null;
 
     if (!audio) {
-      return NextResponse.json({ error: 'No audio file provided.' }, { status: 400 });
+      return NextResponse.json({ error: 'No audio file provided.' }, { status: 400, headers: corsHeaders(origin) });
     }
 
     const buffer = Buffer.from(await audio.arrayBuffer());
@@ -94,7 +100,7 @@ export async function POST(request: Request) {
     if (buffer.length === 0) {
       return NextResponse.json(
         { error: 'Recording is empty. Please record again.' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders(origin) }
       );
     }
 
@@ -105,7 +111,7 @@ export async function POST(request: Request) {
         type: audio.type,
         size: audio.size,
       });
-      return NextResponse.json({ error: 'Unsupported audio format.' }, { status: 400 });
+      return NextResponse.json({ error: 'Unsupported audio format.' }, { status: 400, headers: corsHeaders(origin) });
     }
 
     const safeName = audio.name.replace(/[^a-zA-Z0-9._-]/g, '_');
@@ -119,9 +125,9 @@ export async function POST(request: Request) {
       expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000),
     });
 
-    return NextResponse.json({ url });
+    return NextResponse.json({ url }, { headers: corsHeaders(origin) });
   } catch (error) {
     console.error('Audio upload error:', error);
-    return NextResponse.json({ error: 'Upload failed. Please try again.' }, { status: 500 });
+    return NextResponse.json({ error: 'Upload failed. Please try again.' }, { status: 500, headers: corsHeaders(origin) });
   }
 }

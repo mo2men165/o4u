@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Clock, ArrowRight } from "lucide-react";
@@ -9,13 +9,17 @@ import type { Job } from "@/lib/jobs";
 
 const FILTERS = ["All", "Customer Service", "Sales", "Operations", "Admin"];
 
-interface PositionsProps {
-  jobs: Job[];
-}
-
-export default function Positions({ jobs }: PositionsProps) {
+export default function Positions() {
+  const [jobs, setJobs] = useState<Job[]>([]);
   const [activeFilter, setActiveFilter] = useState("All");
   const router = useRouter();
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ""}/api/jobs`)
+      .then((r) => r.json())
+      .then((data) => { if (Array.isArray(data)) setJobs(data); })
+      .catch(() => {});
+  }, []);
 
   const filtered =
     activeFilter === "All"
@@ -23,7 +27,7 @@ export default function Positions({ jobs }: PositionsProps) {
       : jobs.filter((job) => job.department === activeFilter);
 
   const handleApply = (jobId: string) => {
-    router.push(`/careers/apply/${jobId}`);
+    router.push(`/careers/apply?jobId=${jobId}`);
   };
 
   return (

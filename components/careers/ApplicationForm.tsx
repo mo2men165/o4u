@@ -128,7 +128,7 @@ export default function ApplicationForm({
           (async () => {
             const uploadBody = new FormData();
             uploadBody.append("cv", localData.cv!);
-            const res = await fetch("/api/upload-cv", { method: "POST", body: uploadBody });
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ""}/api/upload-cv`, { method: "POST", body: uploadBody });
             const json = await res.json();
             if (!res.ok) throw new Error(json.error ?? "CV upload failed.");
             cvUrl = json.url as string;
@@ -141,7 +141,7 @@ export default function ApplicationForm({
           (async () => {
             const uploadBody = new FormData();
             uploadBody.append("audio", localData.audio!, localData.audio!.name);
-            const res = await fetch("/api/upload-audio", { method: "POST", body: uploadBody });
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ""}/api/upload-audio`, { method: "POST", body: uploadBody });
             const json = await res.json();
             if (!res.ok) throw new Error(json.error ?? "Audio upload failed.");
             audioUrl = json.url as string;
@@ -159,7 +159,7 @@ export default function ApplicationForm({
 
     setSubmitting(true);
     try {
-      const res = await fetch("/api/apply", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ""}/api/apply`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -1,36 +1,59 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Clock, Briefcase } from "lucide-react";
-import { getJobs, getJobById } from "@/lib/jobs";
 import { Container } from "@/components/ui";
 import ApplicationForm from "@/components/careers/ApplicationForm";
+import type { Job } from "@/lib/jobs";
 
-export const revalidate = 60;
+export default function ApplyPage() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const jobId = searchParams.get("jobId");
 
-export async function generateStaticParams() {
-  const jobs = await getJobs();
-  return jobs.map((job) => ({ jobId: job.id }));
-}
+  const [job, setJob] = useState<Job | null>(null);
+  const [notFound, setNotFound] = useState(false);
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ jobId: string }>;
-}): Promise<Metadata> {
-  const { jobId } = await params;
-  const job = await getJobById(jobId);
-  if (!job) return {};
-  return {
-    title: `Apply for ${job.title} | O4U`,
-    description: job.shortDescription,
-  };
-}
+  useEffect(() => {
+    if (!jobId) {
+      router.replace("/careers");
+      return;
+    }
+    fetch(`${process.env.NEXT_PUBLIC_API_URL ?? ""}/api/jobs/${jobId}`)
+      .then((r) => {
+        if (!r.ok) { setNotFound(true); return null; }
+        return r.json() as Promise<Job>;
+      })
+      .then((data) => { if (data) setJob(data); })
+      .catch(() => setNotFound(true));
+  }, [jobId, router]);
 
-export default async function ApplyPage({ params }: { params: Promise<{ jobId: string }> }) {
-  const { jobId } = await params;
-  const job = await getJobById(jobId);
-  if (!job) notFound();
+  if (notFound) {
+    return (
+      <div className="bg-white dark:bg-primary-900 min-h-screen pt-28 pb-28 flex items-center justify-center">
+        <div className="text-center">
+          <p className="font-heading text-ink/50 dark:text-white/50 text-base mb-4">Position not found.</p>
+          <Link
+            href="/careers#positions"
+            className="inline-flex items-center gap-2 font-heading text-xs font-semibold text-primary-500 hover:text-primary-400 transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            Back to Open Roles
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (!job) {
+    return (
+      <div className="bg-white dark:bg-primary-900 min-h-screen pt-28 pb-28 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full border-2 border-primary-500 border-t-transparent animate-spin" />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white dark:bg-primary-900 min-h-screen pt-28 pb-28">
@@ -44,7 +67,6 @@ export default async function ApplyPage({ params }: { params: Promise<{ jobId: s
         </Link>
 
         <div className="max-w-3xl mx-auto">
-          {/* Job header */}
           <div className="rounded-2xl border border-gray-200 dark:border-primary-700/50 bg-white dark:bg-primary-800 shadow-soft dark:shadow-none p-8 md:p-10 mb-10">
             <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">
               Open Position
@@ -84,7 +106,6 @@ export default async function ApplyPage({ params }: { params: Promise<{ jobId: s
             </p>
           </div>
 
-          {/* Application form */}
           <ApplicationForm preselectedPosition={job.title} embedded />
         </div>
       </Container>
