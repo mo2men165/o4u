@@ -185,6 +185,10 @@ export function buildApplicantThankYouHtml(data: ApplicationEmailData): string {
         </table>
 
         <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4D2578;">
+          If you haven&apos;t heard from us within <strong>one week</strong>, we&apos;ve unfortunately moved forward with other candidates for this role. We sincerely appreciate your interest and encourage you to apply for future openings with O4U.
+        </p>
+
+        <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4D2578;">
           In the meantime, keep an eye on your inbox (and spam folder) for updates from our team. If you have any questions, reply to this email or reach us at
           <a href="mailto:${escapeHtml(COMPANY_INFO.email)}" style="color:#5B2D8E;font-weight:600;text-decoration:none;">${escapeHtml(COMPANY_INFO.email)}</a>.
         </p>
@@ -214,6 +218,8 @@ What happens next:
 1. Our recruiters review your CV and voice introduction.
 2. Shortlisted candidates are contacted within 2 business days.
 3. If selected, we'll invite you to the next stage of our hiring process.
+
+If you haven't heard from us within one week, we've unfortunately moved forward with other candidates for this role. We sincerely appreciate your interest and encourage you to apply for future openings with O4U.
 
 If you have any questions, contact us at ${COMPANY_INFO.email}.
 
