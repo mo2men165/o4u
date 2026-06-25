@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { LinkedinIcon, FacebookIcon, InstagramIcon } from "@/components/ui/BrandIcons";
-import { COMPANY_INFO, FOOTER_LINKS } from "@/lib/constants";
+import { COMPANY_INFO, DEVELOPER_CREDIT, FOOTER_LINKS } from "@/lib/constants";
 import { Container } from "@/components/ui";
 
 export default function Footer() {
@@ -168,9 +168,20 @@ export default function Footer() {
       {/* Copyright */}
       <div className="border-t border-black/10 dark:border-white/10">
         <Container>
-          <p className="py-6 text-center text-sm text-ink/40 dark:text-gray-400">
-            &copy; 2026 O4U. All rights reserved.
-          </p>
+          <div className="py-6 text-center text-sm text-ink/40 dark:text-gray-400 space-y-1">
+            <p>&copy; 2026 O4U. All rights reserved.</p>
+            <p>
+              Developed by{" "}
+              <a
+                href={DEVELOPER_CREDIT.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink/50 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-ink/20 dark:decoration-white/20 underline-offset-2 hover:decoration-primary-500 dark:hover:decoration-primary-300"
+              >
+                {DEVELOPER_CREDIT.name}
+              </a>
+            </p>
+          </div>
         </Container>
       </div>
     </footer>
