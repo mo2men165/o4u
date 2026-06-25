@@ -4,8 +4,17 @@ import { FieldValue } from 'firebase-admin/firestore';
 
 export async function POST(request: Request) {
   try {
-    const { fullName, email, phone, position, coverMessage, cvFileName, cvUrl } =
-      await request.json();
+    const {
+      fullName,
+      email,
+      phone,
+      position,
+      coverMessage,
+      cvFileName,
+      cvUrl,
+      audioFileName,
+      audioUrl,
+    } = await request.json();
 
     if (!fullName || !email || !phone || !position) {
       return NextResponse.json(
@@ -22,6 +31,8 @@ export async function POST(request: Request) {
       coverMessage: coverMessage || '',
       cvFileName: cvFileName || '',
       cvUrl: cvUrl || '',
+      audioFileName: audioFileName || '',
+      audioUrl: audioUrl || '',
       submittedAt: FieldValue.serverTimestamp(),
       status: 'new',
     });

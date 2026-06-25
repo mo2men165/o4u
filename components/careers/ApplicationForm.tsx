@@ -5,6 +5,7 @@ import { useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import { Upload, Send } from "lucide-react";
 import { Container } from "@/components/ui";
+import AudioRecorder from "@/components/careers/AudioRecorder";
 
 interface LocalFormData {
   fullName: string;
@@ -12,6 +13,7 @@ interface LocalFormData {
   phone: string;
   position: string;
   cv: File | null;
+  audio: File | null;
   coverMessage: string;
 }
 
@@ -21,6 +23,7 @@ interface FormErrors {
   phone?: string;
   position?: string;
   cv?: string;
+  audio?: string;
 }
 
 const initialFormData: LocalFormData = {
@@ -29,6 +32,7 @@ const initialFormData: LocalFormData = {
   phone: "",
   position: "",
   cv: null,
+  audio: null,
   coverMessage: "",
 };
 
@@ -58,8 +62,16 @@ export default function ApplicationForm({
   const [errors, setErrors] = useState<FormErrors>({});
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [audioResetKey, setAudioResetKey] = useState(0);
   const firestoreSaved = useRef(false);
-  const pendingData = useRef<Omit<LocalFormData, "cv"> & { cvFileName: string; cvUrl: string } | null>(null);
+  const pendingData = useRef<
+    Omit<LocalFormData, "cv" | "audio"> & {
+      cvFileName: string;
+      cvUrl: string;
+      audioFileName: string;
+      audioUrl: string;
+    } | null
+  >(null);
 
   useEffect(() => {
     if (formspreeState.succeeded && !firestoreSaved.current && pendingData.current) {
@@ -71,6 +83,7 @@ export default function ApplicationForm({
       }).catch(console.error);
       pendingData.current = null;
       setLocalData({ ...initialFormData, position: preselectedPosition ?? "" });
+      setAudioResetKey((k) => k + 1);
       const fileInput = document.getElementById("cv-upload") as HTMLInputElement | null;
       if (fileInput) fileInput.value = "";
     }
@@ -87,6 +100,7 @@ export default function ApplicationForm({
     if (!localData.phone.trim()) newErrors.phone = "Phone number is required.";
     if (!localData.position) newErrors.position = "Please select a position.";
     if (!localData.cv) newErrors.cv = "Please upload your CV.";
+    if (!localData.audio) newErrors.audio = "Please record a short introduction.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -108,32 +122,60 @@ export default function ApplicationForm({
     if (uploadError) setUploadError(null);
   };
 
+  const handleAudioChange = (file: File | null) => {
+    setLocalData((prev) => ({ ...prev, audio: file }));
+    if (errors.audio) setErrors((prev) => ({ ...prev, audio: undefined }));
+    if (uploadError) setUploadError(null);
+  };
+
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate()) return;
 
     setUploadError(null);
 
-    // Step 1: upload CV to Firebase Storage, get a shareable link
     let cvUrl = "";
-    if (localData.cv) {
-      setUploading(true);
-      try {
-        const uploadBody = new FormData();
-        uploadBody.append("cv", localData.cv);
-        const res = await fetch("/api/upload-cv", { method: "POST", body: uploadBody });
-        const json = await res.json();
-        if (!res.ok) throw new Error(json.error ?? "Upload failed.");
-        cvUrl = json.url as string;
-      } catch (err) {
-        setUploading(false);
-        setUploadError(err instanceof Error ? err.message : "Failed to upload CV. Please try again.");
-        return;
-      }
-      setUploading(false);
-    }
+    let audioUrl = "";
 
-    // Step 2: submit text fields + CV link to Formspree (no file attachment)
+    setUploading(true);
+    try {
+      const uploads: Promise<void>[] = [];
+
+      if (localData.cv) {
+        uploads.push(
+          (async () => {
+            const uploadBody = new FormData();
+            uploadBody.append("cv", localData.cv!);
+            const res = await fetch("/api/upload-cv", { method: "POST", body: uploadBody });
+            const json = await res.json();
+            if (!res.ok) throw new Error(json.error ?? "CV upload failed.");
+            cvUrl = json.url as string;
+          })()
+        );
+      }
+
+      if (localData.audio) {
+        uploads.push(
+          (async () => {
+            const uploadBody = new FormData();
+            uploadBody.append("audio", localData.audio!);
+            const res = await fetch("/api/upload-audio", { method: "POST", body: uploadBody });
+            const json = await res.json();
+            if (!res.ok) throw new Error(json.error ?? "Audio upload failed.");
+            audioUrl = json.url as string;
+          })()
+        );
+      }
+
+      await Promise.all(uploads);
+    } catch (err) {
+      setUploading(false);
+      setUploadError(err instanceof Error ? err.message : "Failed to upload files. Please try again.");
+      return;
+    }
+    setUploading(false);
+
+    // Submit text fields + file links to Formspree (no file attachments)
     const fsData = new FormData();
     fsData.append("Full Name", localData.fullName);
     fsData.append("Email", localData.email);
@@ -141,6 +183,7 @@ export default function ApplicationForm({
     fsData.append("Position", localData.position);
     if (localData.coverMessage) fsData.append("Cover Message", localData.coverMessage);
     if (cvUrl) fsData.append("CV Link", cvUrl);
+    if (audioUrl) fsData.append("Audio Link", audioUrl);
 
     pendingData.current = {
       fullName: localData.fullName,
@@ -150,6 +193,8 @@ export default function ApplicationForm({
       coverMessage: localData.coverMessage,
       cvFileName: localData.cv?.name ?? "",
       cvUrl,
+      audioFileName: localData.audio?.name ?? "",
+      audioUrl,
     };
 
     handleFormspreeSubmit(fsData);
@@ -308,6 +353,17 @@ export default function ApplicationForm({
       </div>
 
       <div>
+        <label className="font-heading text-xs font-semibold text-ink/60 dark:text-white/60 uppercase tracking-widest mb-2 block">
+          Voice Introduction <span className="text-red-400">*</span>
+        </label>
+        <AudioRecorder
+          onAudioChange={handleAudioChange}
+          error={errors.audio}
+          resetKey={audioResetKey}
+        />
+      </div>
+
+      <div>
         <label htmlFor="coverMessage" className="font-heading text-xs font-semibold text-ink/60 dark:text-white/60 uppercase tracking-widest mb-2 block">
           Cover Message{" "}
           <span className="text-ink/30 dark:text-white/30 font-normal normal-case tracking-normal text-xs">(optional)</span>
@@ -328,7 +384,7 @@ export default function ApplicationForm({
         disabled={isLoading}
         className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 hover:bg-primary-400 disabled:opacity-60 disabled:cursor-not-allowed px-6 py-4 font-heading text-sm font-bold text-white transition-all duration-200 hover:shadow-glow cursor-pointer"
       >
-        {uploading ? "Uploading CV..." : formspreeState.submitting ? "Submitting..." : (
+        {uploading ? "Uploading files..." : formspreeState.submitting ? "Submitting..." : (
           <>
             Submit Application
             <Send className="w-4 h-4" />
