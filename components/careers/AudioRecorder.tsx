@@ -15,6 +15,39 @@ function formatDuration(seconds: number): string {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
+const RECORDING_MIME_CANDIDATES = [
+  "audio/webm;codecs=opus",
+  "audio/webm",
+  "audio/mp4",
+  "audio/mp4;codecs=mp4a",
+  "audio/aac",
+  "audio/ogg;codecs=opus",
+  "audio/ogg",
+] as const;
+
+function getSupportedRecordingMimeType(): string {
+  for (const type of RECORDING_MIME_CANDIDATES) {
+    if (MediaRecorder.isTypeSupported(type)) return type;
+  }
+  return "";
+}
+
+function normalizeAudioMimeType(mimeType: string): string {
+  const base = mimeType.split(";")[0].trim().toLowerCase();
+  if (base === "audio/x-m4a" || base === "audio/m4a") return "audio/mp4";
+  return base;
+}
+
+function extensionForMimeType(mimeType: string): string {
+  const base = normalizeAudioMimeType(mimeType);
+  if (base.includes("webm")) return "webm";
+  if (base.includes("mp4") || base === "audio/aac") return "m4a";
+  if (base.includes("ogg")) return "ogg";
+  if (base.includes("mpeg")) return "mp3";
+  if (base.includes("wav")) return "wav";
+  return "audio";
+}
+
 export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: AudioRecorderProps) {
   const [isRecording, setIsRecording] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -38,11 +71,12 @@ export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: Au
     if (timerRef.current) clearInterval(timerRef.current);
     if (audioRef.current) {
       audioRef.current.pause();
+      audioRef.current.src = "";
       audioRef.current = null;
     }
+    setIsPlaying(false);
     if (playbackUrl) URL.revokeObjectURL(playbackUrl);
     setIsRecording(false);
-    setIsPlaying(false);
     setDuration(0);
     setRecordedFile(null);
     setPlaybackUrl(null);
@@ -69,11 +103,7 @@ export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: Au
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       streamRef.current = stream;
 
-      const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
-        ? "audio/webm;codecs=opus"
-        : MediaRecorder.isTypeSupported("audio/webm")
-          ? "audio/webm"
-          : "";
+      const mimeType = getSupportedRecordingMimeType();
 
       const recorder = mimeType
         ? new MediaRecorder(stream, { mimeType })
@@ -85,9 +115,17 @@ export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: Au
       };
 
       recorder.onstop = () => {
-        const blobType = recorder.mimeType || "audio/webm";
+        const rawType = recorder.mimeType || mimeType || "audio/webm";
+        const blobType = normalizeAudioMimeType(rawType) || "audio/webm";
         const blob = new Blob(chunksRef.current, { type: blobType });
-        const ext = blobType.includes("webm") ? "webm" : "audio";
+
+        if (blob.size === 0) {
+          setMicError("Recording failed. Please try again.");
+          cleanupStream();
+          return;
+        }
+
+        const ext = extensionForMimeType(blobType);
         const file = new File([blob], `introduction.${ext}`, { type: blobType });
         const url = URL.createObjectURL(blob);
 
@@ -99,7 +137,7 @@ export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: Au
       };
 
       mediaRecorderRef.current = recorder;
-      recorder.start();
+      recorder.start(250);
       setIsRecording(true);
       setDuration(0);
       timerRef.current = setInterval(() => setDuration((d) => d + 1), 1000);
@@ -110,7 +148,11 @@ export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: Au
 
   const stopRecording = () => {
     if (timerRef.current) clearInterval(timerRef.current);
-    mediaRecorderRef.current?.stop();
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.requestData();
+      recorder.stop();
+    }
     setIsRecording(false);
   };
 
@@ -124,8 +166,7 @@ export default function AudioRecorder({ onAudioChange, error, resetKey = 0 }: Au
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
-      audioRef.current.play();
-      setIsPlaying(true);
+      void audioRef.current.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
     }
   };
 

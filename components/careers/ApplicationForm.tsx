@@ -140,7 +140,7 @@ export default function ApplicationForm({
         uploads.push(
           (async () => {
             const uploadBody = new FormData();
-            uploadBody.append("audio", localData.audio!);
+            uploadBody.append("audio", localData.audio!, localData.audio!.name);
             const res = await fetch("/api/upload-audio", { method: "POST", body: uploadBody });
             const json = await res.json();
             if (!res.ok) throw new Error(json.error ?? "Audio upload failed.");
