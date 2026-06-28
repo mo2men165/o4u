@@ -3,6 +3,8 @@ import { cpSync, existsSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
+const apiUrl =
+  process.env.NEXT_PUBLIC_API_URL ?? "https://api.outsourcing-4-you.com";
 const apiDir = join(root, "app/api");
 const apiBackup = join(root, "app/_api_backup");
 const middleware = join(root, "middleware.ts");
@@ -21,13 +23,18 @@ function restoreIfExists(from, to) {
 
 try {
   console.log("Preparing static export (API routes and middleware are excluded)...");
+  console.log(`API base URL: ${apiUrl}`);
   moveIfExists(apiDir, apiBackup);
   moveIfExists(middleware, middlewareBackup);
 
   execSync("npm run build", {
     cwd: root,
     stdio: "inherit",
-    env: { ...process.env, STATIC_EXPORT: "1" },
+    env: {
+      ...process.env,
+      STATIC_EXPORT: "1",
+      NEXT_PUBLIC_API_URL: apiUrl,
+    },
   });
 
   const htaccess = join(root, "out/.htaccess");
