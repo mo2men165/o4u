@@ -24,11 +24,6 @@ export const NAV_LINKS = [
   { label: "Contact Us", href: "/contact" },
 ] as const;
 
-export const DEVELOPER_CREDIT = {
-  name: "MA Development",
-  url: "https://moamenabdeltawab.com/",
-} as const;
-
 export const FOOTER_LINKS = {
   quickLinks: [
     { label: "Home", href: "/" },
